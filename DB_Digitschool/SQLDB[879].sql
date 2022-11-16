@@ -6,6 +6,7 @@ create table teacher(
     teacherPassword varchar(100) not null,
     teacherAdress varchar(50) not null,
     teacherPostalCode varchar(20) not null,
+    teacherVille varchar(30) not null,
     teacherPhoneNumber varchar(20) not null,
     teacherBirthDate datetime not null,
     teacherFunction varchar(32) not null
@@ -43,6 +44,7 @@ create table student(
     studentBirthDate datetime not null,
     studentAdress varchar(50) not null,
     studentPostalCode varchar(20) not null,
+    studentVille varchar(30) not null,
     studentFunction varchar(32) not null,
     studentRespondablePay boolean not null,
     classId int,
@@ -76,6 +78,7 @@ create table secretary(
     secretaryPassword varchar(100) not null,
     secretaryAdress varchar(50) not null,
     secretaryPostalCode varchar(20) not null,
+    secretaryVille varchar(30) not null,
     secretaryPhoneNumber varchar(20) not null,
     secretaryBirthDate datetime not null,
     secretaryFunction varchar(32) not null            
@@ -89,6 +92,7 @@ create table parent(
     parentPassword varchar(100) not null,
     parentAdress varchar(50) not null,
     parentPostalCode varchar(20) not null,
+    parentVille varchar(30) not null,
     parentPhoneNumber varchar(20) not null,
     parentBirthDate datetime not null,
     parentFunction varchar(32) not null,
