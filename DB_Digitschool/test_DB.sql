@@ -33,4 +33,9 @@ Values(1,1);
 insert into secretary(secretaryName,secretaryFirstName,secretaryEmail,secretaryPassword,secretaryAdress,secretaryPostalCode,secretaryVille,secretaryPhoneNumber,secretaryBirthDate,secretaryFunction)
 Values('Gauthier','Sandrine','gauthiersandrine@gmail.com','gauthier123','Rue de la meuse 21','5500','Namur','0482369821','1978-05-27 00:00:00','secretary');
 
+/* PARENT */
+
+insert into parent(parentName,parentFirstName,parentEmail,parentPassword,parentAdress,parentPostalCode,parentVille,parentPhoneNumber,parentBirthDate,parentFunction,parentResponsablePay)
+Values('Michaux','Yves','michauxyves@gmail.com','michaux123','22 Rue edouard','5300','Andenne','0475354829','1970-12-08 00:00:00','parent',true);
+
 
