@@ -1,0 +1,95 @@
+/*IMPORT*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* LOGIN */
+
+.mainLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.divLoginForm{
+    width: 85%;
+    height: 34em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.loginForm{
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.boxForm{
+    margin-left: 3em;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: left;
+    align-items: top;
+    width: 90%;
+}
+
+.loginImage{
+    width: 65%;
+    height: 100%;
+    background : url("https://zupimages.net/up/22/49/br4d.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.titleForm{
+    color: black;
+    font-size: 30px;
+    margin-top: 2em;
+    font-family: 'Inter', sans-serif;
+}
+
+.loginSelect{
+    width: 15em;
+}
+
+.champs{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.input{
+    width: 20em;
+    height: 2em;
+    margin-top: 0.3em;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif; 
+    transition: 0.3s;
+    outline-style: none;
+    border: solid 0.5px  gray;
+}
+.input:hover{
+    border: solid 1.5px #AEB0F6;
+    transition: 0.3s ease-in-out;
+}
+
+.boxSelect{
+    margin-top: 2em;
+}
+
+.loginSelect{
+    font-family: 'Roboto', sans-serif; 
+}
+
+#btnLogin{
+    background-color: #4F46E5;
+    color: white;
+    font-family: 'Roboto', sans-serif; 
+    width: 20em;
+    margin-top: 2em;
+    border-radius: 5px;
+    height: 2em;
+}
