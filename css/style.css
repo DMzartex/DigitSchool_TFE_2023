@@ -1,0 +1,133 @@
+body {
+    height: 100vh;
+    background: #009dff;
+    background: no-repeat linear-gradient(0deg, rgb(8, 0, 255) 0%, rgba(106,201,255,1) 100%);
+    font-family: "inter", sans-serif;
+}
+
+.title{
+    color: rgb(255, 255, 255);
+    margin-top: 5%;
+    margin-left: 5%;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 7%;
+    align-items: center;
+    background: #000000;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #c4c4c4;
+    padding: 8px 20px;
+    border-radius: 7px;
+    transition: all .3s ease;
+}
+
+ul li a:hover,
+ul li a.active {
+    color: #FFF;
+    font-size: 20px;
+}
+
+#icon {
+    background-color: #000000;
+    padding: 5px 7px 3px 7px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s ease;   
+}
+
+#icon svg {
+    color: #FFF;
+    height: 28px;
+    transition: all .3s ease;
+}
+
+#icon:hover {
+    background: #FFF;
+}
+
+#icon:hover svg {
+    color: #0075FF;
+}
+
+#checkbox,
+#icon {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    nav {
+        border-bottom: 1px solid #455468;
+    }
+
+    ul {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 71px);
+        background-color: #18283B;
+        left: 0;
+        top: 0;
+        text-align: center;
+        display: none;
+        margin-top: 71px;
+    }
+
+    ul li {
+        display: block;
+        padding: 10px 15px;
+    }
+
+    ul li a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    #icon {
+        display: block;
+    }
+
+    #checkbox:checked~ul {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .picture{
+        height: 0px;
+        width: 0px;
+        visibility: hidden;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 7%;
+        align-items: center;
+        background: #f1f1f1;
+    }
+}
+
+@media screen and (max-width: 300px){
+    .logo{
+        font-size: 15px
+    }
+}
