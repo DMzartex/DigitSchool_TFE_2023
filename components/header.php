@@ -19,7 +19,7 @@
             <?php if(!empty($_SESSION['role'])): ?>
                 <?php if($_SESSION['role'] == "student" || "parent" || "secretary"): ?>
                     <li>
-                        <a href="#">Factures</a>
+                        <a href="index.php?/templates/factures/facture.php">Factures</a>
                     </li>
                 <?php endif; ?>
                 <?php if($_SESSION['role'] == "student" || "parent" || "teacher"): ?>

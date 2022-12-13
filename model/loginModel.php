@@ -1,5 +1,4 @@
 <?php
-
 function connectUser($conn){
     if(!empty($_POST['mailLogin'] && $_POST['passLogin'] && $_POST['role'])){
         if($_POST['role'] != "none"){
@@ -22,7 +21,7 @@ function connectUser($conn){
                     if($passwordVerify){
                         $_SESSION['role'] = htmlspecialchars($_POST['role']);
                         $_SESSION['isLogin'] = true;
-                        header('Location:/DigitSchool_TFE_2023/index.php?/templates/users/'.$_SESSION['role'].'.php');
+                        header('Location:/DigitSchool_TFE_2023/index.php?/templates/users/workSpace.php');
                     }else{
                         echo 'Votre mot de passe est incorrect !';
                     }

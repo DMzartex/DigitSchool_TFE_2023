@@ -8,8 +8,13 @@ if($uri == "/DigitSchool_TFE_2023/index.php?/templates/login/login.php" && empty
 }elseif(!empty($_SESSION['isLogin']) && $_SESSION['isLogin'] == true){
     disconnect();
     if(!empty($_SESSION['role'])){
-        if($uri == "/DigitSchool_TFE_2023/index.php?/templates/users/".$_SESSION['role'].".php"){
-            require_once "templates/users/".$_SESSION['role'].".php";
+        if($uri == "/DigitSchool_TFE_2023/index.php?/templates/users/workSpace.php")
+        require_once "templates/users/workSpace.php";
+        if($uri == "/DigitSchool_TFE_2023/index.php?/templates/factures/facture.php"){
+            require_once "templates/factures/facture.php";
+        }
+        if($uri == "/DigitSchool_TFE_2023/index.php?/templates/factures/newFacture.php"){
+            require_once "templates/factures/newFacture.php";
         }
     }
 }
