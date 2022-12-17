@@ -18,6 +18,8 @@ require_once 'model/loginModel.php';
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/structure.css">
+    <link rel="stylesheet" href="css/factureForms.css">
     
   </head>
   <body>
