@@ -76,23 +76,11 @@
     height: 2em;
 }
 
-/* banner */
-
-.banner{
-    width: 100vw;
-    height: 45vh;
-    font-family: 'Inter', sans-serif;
-    background-image: url("images/imgFacture.jpg");
-}
 
 /* BACKGROUND COLOR */
 
 .background-red{
     background-color: red;
-}
-
-.background-yellow{
-    background-color: yellow;
 }
 
 /* COLOR */

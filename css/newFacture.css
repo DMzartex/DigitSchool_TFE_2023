@@ -1,0 +1,42 @@
+.bannerFacture{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    background: cadetblue;
+}
+
+.svgFacture{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.svgPay{
+    width: 690px;
+}
+
+.test{
+    background: rebeccapurple;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.test2{
+    background: yellow;
+    height: 40vh;
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.test3{
+    background: red;
+    height: 40vh;
+    width: 30vw;
+
+}

@@ -1,5 +1,14 @@
-<div class="width-full height-full background-red display-flex flex-direction-column justify-content-center align-items-center">
-    <h1>Création d'une nouvelle facture</h1>
-    <?php require_once "model/bannerFacture.php"?>
-    <?php require_once "forms/factureForms.php"?>
+<link rel="stylesheet" href="css/newFacture.css">
+<div class="bannerFacture">
+    <div class="svgFacture">
+        <img src="./images/bill-pay-4489857-3766596.webp"  alt="" class="svgPay">
+    </div>
+    <div class="test">
+        <div class="test3">
+            <?php require_once 'forms/factureForms.php'?>
+        </div>
+        <div class="test2">
+            <h1>New Facture !</h1>
+        </div>
+    </div>
 </div>
