@@ -1,42 +1,75 @@
 .bannerFacture{
     width: 100vw;
     height: 100vh;
-    font-family: 'Inter', sans-serif;
     position: relative;
-    background: cadetblue;
+    font-family: 'Roboto', sans-serif;
 }
 
 .svgFacture{
     position: absolute;
-    top: 20px;
+    top: 50px;
     right: 30px;
 }
 
 .svgPay{
-    width: 690px;
+    width: 490px;
 }
 
 .test{
-    background: rebeccapurple;
     height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
 .test2{
-    background: yellow;
-    height: 40vh;
-    width: 30vw;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    height: auto;
+    width: 36em;
+    margin-right: 14em;
+    margin-top: 15vh;
+   
 }
 
 .test3{
-    background: red;
-    height: 40vh;
-    width: 30vw;
+    margin-top: 0.9em;
+    height: auto;
+    width: 36em;
+    margin-right: 14em;
+}
 
+/* search bar */
+
+.boxSearch{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+#btnSearch{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    width: 10em;
+    border-radius: 5px;
+    height: 1.5em;
+    margin-top: 0.9em;
+    background-color: #93CBA3;
+}
+
+.searchBar{
+    width: 30em;
+    height: 2.5em;
+    margin-top: 0.9em;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif; 
+    transition: 0.3s;
+    outline-style: none;
+    border: solid 0.5px  gray;
+    cursor: pointer;
+}
+
+.searchBar:hover{
+    border: solid 1.5px #AEB0F6;
+    transition: 0.3s ease-in-out;
 }

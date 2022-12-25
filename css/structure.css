@@ -51,7 +51,6 @@
 }
 
 
-
 /* formulaire */
 
 .input{
@@ -76,8 +75,36 @@
     height: 2em;
 }
 
+/* search bar */
+
+.boxSearch{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#btnSearch{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    width: 10em;
+    border-radius: 5px;
+    height: 1.5em;
+    margin-top: 0.9em;
+    background-color: #93CBA3;
+}
+
+.searchBar{
+    width: 36em;
+    height: 2.5em;
+    margin-top: 0.9em;
+    border-radius: 5px;
+}
+
+
 
 /* BACKGROUND COLOR */
+
 
 .background-red{
     background-color: red;
