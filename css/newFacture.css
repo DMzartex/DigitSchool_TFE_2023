@@ -1,75 +1,89 @@
-.bannerFacture{
-    width: 100vw;
+.containerNewFacture{
+    width: 100%;
     height: 100vh;
-    position: relative;
-    font-family: 'Roboto', sans-serif;
+    background: #0A092D;
 }
 
-.svgFacture{
-    position: absolute;
-    top: 50px;
-    right: 30px;
-}
-
-.svgPay{
-    width: 490px;
-}
-
-.test{
-    height: 100vh;
+.containerBanner{
     display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-wrap: wrap;
+    height: 60vh;
+    width: 100%;
 }
 
-.test2{
+.containerTextBanner{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 100%;
+}
+
+.containerSearchBar{
+    margin: 2em;
+}
+
+.contentBanner{
+    background: #151e2f;
+    width: 50vw;
+    height: 40vh;
     display: flex;
-    flex-direction: row;
-    height: auto;
-    width: 36em;
-    margin-right: 14em;
-    margin-top: 15vh;
-   
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-left: 10em;
 }
 
-.test3{
-    margin-top: 0.9em;
-    height: auto;
-    width: 36em;
-    margin-right: 14em;
-}
-
-/* search bar */
-
-.boxSearch{
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-}
-
-#btnSearch{
+.textBanner{
+    font-size: 2.5rem;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
+    margin: 1em;
     color: white;
-    font-family: 'Roboto', sans-serif;
-    width: 10em;
-    border-radius: 5px;
-    height: 1.5em;
-    margin-top: 0.9em;
-    background-color: #93CBA3;
 }
 
-.searchBar{
-    width: 30em;
-    height: 2.5em;
-    margin-top: 0.9em;
-    border-radius: 5px;
-    font-family: 'Roboto', sans-serif; 
-    transition: 0.3s;
-    outline-style: none;
-    border: solid 0.5px  gray;
-    cursor: pointer;
+.textGreen{
+ color: #93CBA3;
 }
 
-.searchBar:hover{
-    border: solid 1.5px #AEB0F6;
-    transition: 0.3s ease-in-out;
+
+.containerCard{
+    color: white;
+    width: 29vw;
+    height: 40vh;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: wrap;
+    margin-left: 3px;
 }
+
+
+.card{
+    border-radius: 5px;
+    width: 12vw;
+    height: 12em;
+    background: #151e2f;
+    margin-left: 3px;
+
+}
+
+.textCard{
+    font-size: 22px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
+}
+
+.iconCard{
+    font-size: 40px;
+}
+
+
+
+
+
+
+
+

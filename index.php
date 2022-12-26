@@ -20,7 +20,8 @@ require_once 'model/loginModel.php';
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/structure.css">
     <link rel="stylesheet" href="css/factureForms.css">
-    
+      <script src="https://kit.fontawesome.com/cdc07db3e6.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="css/searchBar.css">
   </head>
   <body>
     <?php require_once 'components/header.php' ?>

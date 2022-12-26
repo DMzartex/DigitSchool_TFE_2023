@@ -16,7 +16,7 @@ nav {
     justify-content: space-between;
     padding: 10px 7%;
     align-items: center;
-    background: #000000;
+    background: #161b2a;
 }
 
 .logo {
@@ -86,6 +86,7 @@ ul li a.active {
         width: 100%;
         height: calc(100vh - 71px);
         background-color: #18283B;
+        z-index: 2;
         left: 0;
         top: 0;
         text-align: center;
@@ -111,22 +112,26 @@ ul li a.active {
         display: block;
         margin-top: 3.53em;
         height: 100vh;
+
     }
 }
 
 @media screen and (max-width: 400px){
     nav {
         display: flex;
+        position: relative;
         justify-content: space-between;
         padding: 10px 7%;
         align-items: center;
         background: black;
+
+
     }
 }
 
 @media screen and (max-width: 300px){
     .logo{
-        font-size: 15px
+        font-size: 15px;
     }
 }
 

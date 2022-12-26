@@ -1,21 +1,30 @@
 <link rel="stylesheet" href="css/newFacture.css">
-<div class="bannerFacture">
-    <div class="svgFacture">
-        <img src="./images/bill-pay-4489857-3766596.webp"  alt="" class="svgPay">
-    </div>
-    <div class="test">
-        <div class="test2">
-            <div style="width:100px;">
-                <h1>Envoyer vos factures directement via à la platforme en ligne </h1>
+<div class="containerNewFacture">
+    <div class="containerBanner">
+        <div class="contentBanner">
+            <div class="containerTextBanner">
+                <h1 class="textBanner"><span class="textGreen">Rechercher un élève</span> ou un parent d'élève <span class="textGreen">en un click</span></h1>
             </div>
-            
-            <div class="test3">
-                <div>
-                    <?php require_once 'components/searchBar.php'?>
-                </div>
-                <div>
-                    <?php require_once 'forms/factureForms.php'?>
-                </div>
+            <div class="containerSearchBar">
+                <?php require_once 'components/searchBar.php'?>
+            </div>
+        </div>
+        <div class="containerCard">
+            <div class="card">
+                <span class="iconCard"><i class="fa-solid fa-handshake-simple"></i></span>
+                <h1 class="textCard">Rapide et efficace.</h1>
+            </div>
+            <div class="card">
+                <span class="iconCard"><i class="fa-solid fa-users"></i></span>
+                <h1 class="textCard">Simple d'utilisation</h1>
+            </div>
+            <div class="card">
+                <span class="iconCard"><i class="fa-solid fa-shield-halved"></i></span>
+                <h1 class="textCard">Payer en ligne en toute sécurité</h1>
+            </div>
+            <div class="card">
+                <span class="iconCard"><i class="fa-solid fa-seedling"></i></span>
+                <h1 class="textCard">Responsable de l'environnement</h1>
             </div>
         </div>
     </div>
