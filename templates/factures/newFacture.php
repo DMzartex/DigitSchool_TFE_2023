@@ -28,4 +28,52 @@
             </div>
         </div>
     </div>
+
+    <div class="containerForm">
+        <div class="contentResult">
+            <div class="headerResult">
+                <div class="colHeader">
+                    <h1 class="txtCol">Nom</h1>
+                </div>
+                <div class="colHeader">
+                    <h1 class="txtCol">Prénom</h1>
+                </div>
+                <div class="colHeader">
+                    <h1 class="txtCol">Email</h1>
+                </div>
+            </div>
+            <div class="containerInfo">
+                <?php for ($i = 0; $i < 4; $i++): ?>
+                    <div class="contentInfo">
+                        <div class="txtInfo">
+                            <a href="#">Michaux</a>
+                        </div>
+                        <div class="txtInfo">
+                            <a href="#">Dorian</a>
+                        </div>
+                        <div class="txtInfo">
+                            <a href="#">dorian-michaux21@outlook.be</a>
+                        </div>
+                    </div>
+                <?php endfor; ?>
+
+                <?php for ($i = 0; $i < 4; $i++): ?>
+                    <div class="contentInfo">
+                        <div class="txtInfo">
+                            <a href="#">Michauxdsqdsq</a>
+                        </div>
+                        <div class="txtInfo">
+                            <a href="#">Doriandsqdsqdsq</a>
+                        </div>
+                        <div class="txtInfo">
+                            <a href="#">dorian-michaux21@outlook.beddsdsqdsqdsq</a>
+                        </div>
+                    </div>
+                <?php endfor; ?>
+            </div>
+            <div class="contentForm">
+
+            </div>
+        </div>
+    </div>
 </div>

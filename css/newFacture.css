@@ -1,16 +1,13 @@
-.containerNewFacture{
-    width: 100%;
-    height: 100vh;
+body{
     background: #0A092D;
 }
-
 .containerBanner{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    height: 60vh;
+    height: 50vh;
     width: 100%;
 }
 
@@ -32,7 +29,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    margin-left: 10em;
+    margin-left: 3em;
 }
 
 .textBanner{
@@ -50,7 +47,7 @@
 
 .containerCard{
     color: white;
-    width: 29vw;
+    width: 25vw;
     height: 40vh;
     text-align: center;
     display: flex;
@@ -59,7 +56,6 @@
     flex-wrap: wrap;
     margin-left: 3px;
 }
-
 
 .card{
     border-radius: 5px;
@@ -79,6 +75,77 @@
 .iconCard{
     font-size: 40px;
 }
+
+.containerForm{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contentResult{
+    background: #151e2f;
+    width: 60vw;
+    height: auto;
+    border-radius: 10px;
+}
+
+.headerResult{
+    width: 80%;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.colHeader{
+    width: 26%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid white;
+    margin-left: 2.5em;
+}
+
+.txtCol{
+    color: white;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
+}
+
+.containerInfo{
+    width: 80%;
+    height: auto;
+    background: red;
+}
+
+.contentInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 0.5em;
+}
+
+.txtInfo{
+    width: 26%;
+    margin-left: 0.5em;
+    margin-top: 1em;
+    color: white;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    margin-left: 2.1em;
+}
+
+.contentForm{
+    width: 80%;
+    height: 400px;
+    background: yellow;
+}
+
 
 
 
