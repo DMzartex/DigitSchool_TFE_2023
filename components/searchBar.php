@@ -11,7 +11,7 @@
     </div>
 
     <div class="boxSearchBar">
-        <input type="text" class="searchBar" placeholder="Recherche :">
+        <input type="text" name="nameFirstName" class="searchBar" placeholder="Recherche :">
         <button type="submit" class="btnSearch"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
     </div>
 

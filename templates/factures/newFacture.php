@@ -46,7 +46,7 @@
                 <?php for ($i = 0; $i < 4; $i++): ?>
                     <div class="contentInfo">
                         <div class="txtInfo">
-                            <a href="#">Michaux</a>
+                            <a <?php if(empty($_GET['name'])):?>href="<?=$uri?>&name=Dorian"<?php endif;?>class="link">Michaux</a>
                         </div>
                         <div class="txtInfo">
                             <a href="#">Dorian</a>
@@ -72,8 +72,14 @@
                 <?php endfor; ?>
             </div>
             <div class="contentForm">
-
+                <div class="containerformFacture">
+                    <h1 class="titleFormFacture">Envoyer votre facture ici</h1>
+                    <div class="formNewFacture">
+                        <?php require_once 'forms/factureForms.php'?>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
