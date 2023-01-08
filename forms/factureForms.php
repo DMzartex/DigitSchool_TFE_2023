@@ -1,8 +1,12 @@
 <link rel="stylesheet" href="css/factureForms.css">
 <form action="" method="post">
     <div class="display-flex-column">
-        <label for="desti" class="labelFormFact">Nom du destinataire :</label>
-        <input class="input" type="text" name="nomDesti" id="desti">
+        <label for="nameDesti" class="labelFormFact">Nom du destinataire :</label>
+        <input class="input" type="text" name="nameDesti" id="nameDesti" <?php if(isset($_SESSION['infoName'])):?> value="<?=$_SESSION['infoName']?>"<?php endif;?>>
+    </div>
+    <div class="display-flex-column">
+        <label for="firstNameDesti" class="labelFormFact">Prénom du destinataire :</label>
+        <input class="input" type="text" name="firstNameDesti" id="firstNameDesti">
     </div>
     <div class="display-flex-column">
         <label for="adresse" class="labelFormFact">Adresse du destinataire :</label>

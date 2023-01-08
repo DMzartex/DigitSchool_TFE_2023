@@ -93,7 +93,7 @@ body{
 }
 
 .headerResult{
-    width: 80%;
+    width: 90%;
     height: 5vh;
     display: flex;
     flex-direction: row;
@@ -102,7 +102,7 @@ body{
 }
 
 .colHeader{
-    width: 26%;
+    width: 22.5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,7 +118,7 @@ body{
 }
 
 .containerInfo{
-    width: 80%;
+    width: 90%;
     height: auto;
 
 }
@@ -128,16 +128,17 @@ body{
     flex-direction: row;
     justify-content: space-around;
     margin-left: 0.5em;
+
 }
 
 .txtInfo{
-    width: 26%;
+    width: 22.5%;
     margin-left: 0.5em;
     margin-top: 1em;
     color: white;
     font-size: 14px;
     font-family: 'Inter', sans-serif;
-    margin-left: 2.1em;
+    margin-left: 2.5em;
 }
 
 .contentForm{

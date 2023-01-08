@@ -33,6 +33,9 @@
         <div class="contentResult">
             <div class="headerResult">
                 <div class="colHeader">
+                    <h1 class="txtCol">Id</h1>
+                </div>
+                <div class="colHeader">
                     <h1 class="txtCol">Nom</h1>
                 </div>
                 <div class="colHeader">
@@ -43,33 +46,26 @@
                 </div>
             </div>
             <div class="containerInfo">
-                <?php for ($i = 0; $i < 4; $i++): ?>
-                    <div class="contentInfo">
-                        <div class="txtInfo">
-                            <a <?php if(empty($_GET['name'])):?>href="<?=$uri?>&name=Dorian"<?php endif;?>class="link">Michaux</a>
+                <?php if(!empty($_SESSION['resultSearch'])):?>
+                    <?php foreach ($_SESSION['resultSearch'] as $result): ?>
+                        <div class="contentInfo">
+                            <div class="txtInfo">
+                                <a <?php if(empty($_GET['id'])):?> href="<?=$uri?>&id=<?=$result['studentId']?>"<?php endif;?>><?=$result['studentId']?></a>
+                            </div>
+                            <div class="txtInfo">
+                                <a href=""class="link"><?=$result['studentName'] ?></a>
+                            </div>
+                            <div class="txtInfo">
+                                <a href="#"><?=$result['studentFirstName']?></a>
+                            </div>
+                            <div class="txtInfo">
+                                <a href="#"><?=$result['studentEmail']?></a>
+                            </div>
                         </div>
-                        <div class="txtInfo">
-                            <a href="#">Dorian</a>
-                        </div>
-                        <div class="txtInfo">
-                            <a href="#">dorian-michaux21@outlook.be</a>
-                        </div>
-                    </div>
-                <?php endfor; ?>
+                    <?php endforeach; ?>
+                <?php endif; ?>
 
-                <?php for ($i = 0; $i < 4; $i++): ?>
-                    <div class="contentInfo">
-                        <div class="txtInfo">
-                            <a href="#">Michauxdsqdsq</a>
-                        </div>
-                        <div class="txtInfo">
-                            <a href="#">Doriandsqdsqdsq</a>
-                        </div>
-                        <div class="txtInfo">
-                            <a href="#">dorian-michaux21@outlook.beddsdsqdsqdsq</a>
-                        </div>
-                    </div>
-                <?php endfor; ?>
+
             </div>
             <div class="contentForm">
                 <div class="containerformFacture">

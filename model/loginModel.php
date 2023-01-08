@@ -40,11 +40,9 @@ function connectUser($conn){
 }
 
 function disconnect(){
-    if(!empty($_GET['disconnect']) && $_GET['disconnect'] == "true"){
-        unset($_SESSION['isLogin']);
-        unset($_SESSION['role']);
-        header('Location:/DigitSchool_TFE_2023/index.php?/templates/login/login.php');
-    };
+    unset($_SESSION['isLogin']);
+    unset($_SESSION['role']);
+    header('Location:/DigitSchool_TFE_2023/index.php?/templates/login/login.php');
 }
 
 ?>
