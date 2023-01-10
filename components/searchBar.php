@@ -1,4 +1,4 @@
-<form action="" method="GET">
+<form action="" method="post">
     <div>
         <h1 class="textInfoSearchBar">Inscrivez <span class="textGreen">le nom</span> et <span class="textGreen">le prénom</span> d'un utilisateur.</h1>
     </div>

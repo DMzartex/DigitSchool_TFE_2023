@@ -12,3 +12,7 @@ function getInfoForm($conn,$id){
     $infoForm = $stmt->fetchAll();
     return $infoForm;
 };
+
+function createFacture($conn,$id,$nameDesti,$firstNameDesti,$adressDesti,$postalCodeDesti,$communication,$montant){
+
+}

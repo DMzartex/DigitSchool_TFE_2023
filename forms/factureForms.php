@@ -6,15 +6,15 @@
     </div>
     <div class="display-flex-column">
         <label for="firstNameDesti" class="labelFormFact">Prénom du destinataire :</label>
-        <input class="input" type="text" name="firstNameDesti" id="firstNameDesti">
+        <input class="input" type="text" name="firstNameDesti" id="firstNameDesti" <?php if(isset($_SESSION['infoFirstName'])):?> value="<?=$_SESSION['infoFirstName']?>"<?php endif;?>>
     </div>
     <div class="display-flex-column">
         <label for="adresse" class="labelFormFact">Adresse du destinataire :</label>
-        <input class="input" type="text" name="addrDesti" id="adresse">
+        <input class="input" type="text" name="addrDesti" id="adresse" <?php if(isset($_SESSION['infoAdress'])):?> value="<?=$_SESSION['infoAdress']?>"<?php endif;?>>
     </div>
     <div class="display-flex-column">
         <label for="postalCode" class="labelFormFact">Code postal du destinataire :</label>
-        <input class="input" type="text" name="postalCodeDesti" id="postalCode">
+        <input class="input" type="text" name="postalCodeDesti" id="postalCode" <?php if(isset($_SESSION['infoPostalCode'])):?> value="<?=$_SESSION['infoPostalCode']?>"<?php endif;?>>
     </div>
     <div class="display-flex-column">
         <label for="communication" class="labelFormFact">Communication :</label>

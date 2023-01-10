@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="containerInfo">
-                <?php if(!empty($_SESSION['resultSearch'])):?>
+                <?php if(isset($_SESSION['resultSearch'])):?>
                     <?php foreach ($_SESSION['resultSearch'] as $result): ?>
                         <div class="contentInfo">
                             <div class="txtInfo">
@@ -64,8 +64,6 @@
                         </div>
                     <?php endforeach; ?>
                 <?php endif; ?>
-
-
             </div>
             <div class="contentForm">
                 <div class="containerformFacture">

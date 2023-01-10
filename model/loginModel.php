@@ -7,10 +7,12 @@ function connectUser($conn){
                 $email = stripslashes($email);
                 $email = htmlspecialchars($email);
                 $roleEmail = $_POST['role']."Email";
+                $roleId = $_POST['role']."Id";
                 $stmtEmail = $conn->prepare("SELECT * FROM $_POST[role] WHERE $roleEmail='$email'");
                 $stmtEmail->execute();
                 $user = $stmtEmail->fetch();
                 if($user){
+                    $_SESSION['userId'] = $user[$roleId];
                     $rolePassword = $_POST['role']."Password";
                     $password = htmlspecialchars($_POST['passLogin']);
                     $stmtPassword = $conn->prepare("SELECT $rolePassword FROM $_POST[role] WHERE $roleEmail='$email'");
