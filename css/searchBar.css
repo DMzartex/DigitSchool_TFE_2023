@@ -1,11 +1,16 @@
+.formSearchBar{
+    margin-left: 1.5em;
+    margin-top: 1.5em;
+}
+
 .boxSearchBar{
     height: auto;
-    width: 20em;
+    width: 100%;
     position: relative;
 }
 
 .searchBar{
-    width: 20em;
+    width: 80%;
     height: 2.2em;
     padding-left: 20px;
     padding-bottom: 2px;
@@ -16,13 +21,18 @@
 
 .btnSearch{
    position: absolute;
-    right: 10px;
+    right: 95px;
     top: 5px;
     color: #93CBA3;
 }
 
 .boxSelectFacture{
     margin-bottom: 0.8em;
+    width: 100%;
+}
+
+.selectRole{
+    width: 60%;
 }
 
 .textInfoSearchBar{
@@ -31,6 +41,19 @@
     font-family: 'Inter', sans-serif;
     letter-spacing: 2px;
     margin-bottom: 23px;
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+    .formSearchBar{
+        margin-left: 1em;
+        margin-top: 0.5em;
+    }
+
+    .btnSearch{
+        position: absolute;
+        right: 80px;
+    }
 }
 
 

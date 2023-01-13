@@ -1,9 +1,9 @@
-<form action="" method="post">
+<form action="" method="post" class="formSearchBar">
     <div>
         <h1 class="textInfoSearchBar">Inscrivez <span class="textGreen">le nom</span> et <span class="textGreen">le prénom</span> d'un utilisateur.</h1>
     </div>
     <div class="boxSelectFacture">
-        <select class="loginSelect form-select form-select-md" name="role" aria-label="Default select example">
+        <select class="selectRole form-select form-select-md" name="role" aria-label="Default select example">
             <option selected value="none">Choisissez un rôle :</option>
             <option value="student">Etudiant</option>
             <option value="parent">Parent</option>
