@@ -47,9 +47,14 @@
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px){
     .formSearchBar{
         margin-left: 1em;
-        margin-top: 0.5em;
-    }
 
+    }
+    .textInfoSearchBar{
+        margin-bottom: 10px;
+    }
+    .boxSelectFacture{
+        margin-bottom: 0.8em;
+    }
     .btnSearch{
         position: absolute;
         right: 80px;

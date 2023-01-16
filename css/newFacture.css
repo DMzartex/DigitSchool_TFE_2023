@@ -4,7 +4,6 @@ body{
 }
 
 .containerTop{
-    background: red;
     height: 50vh;
     margin-top: 2.5em;
     display: flex;
@@ -17,19 +16,19 @@ body{
 .boxT-1{
     width: 50%;
     height: 80%;
-    background: orange;
+    background: #151e2f;
     display: flex;
     flex-direction: row;
+    border-radius: 10px;
 }
 
 .boxT-2{
     width: 25%;
     height: 80%;
-    background: purple;
+
 }
 
 .boxTxt{
-    background: #0075FF;
     width: 55%;
     height: 100%;
     display: flex;
@@ -38,7 +37,6 @@ body{
 }
 
 .boxSearch{
-    background: #AEB0F6;
     width: 45%;
     height: 100%;
     display: flex;
@@ -60,14 +58,12 @@ body{
 }
 
 .colCard-1{
-    background: aquamarine;
     width: 100%;
     height: 50%;
     display: flex;
     flex-direction: row;
 }
 .colCard-2{
-    background: chocolate;
     width: 100%;
     height: 50%;
     display: flex;
@@ -75,11 +71,124 @@ body{
 }
 
 .card{
-    background: black;
+    background: #151e2f;
     width: 50%;
     height: 100%;
-    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.textCard{
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
+    word-wrap: break-word;
+}
+
+.iconCard{
+    color: white;
+    font-size: 40px;
+}
+
+
+.containerBottom{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resultSearch{
+    height: auto;
+    width: 75%;
+    background: #151e2f;
+    border-radius: 5px;
+}
+
+.header_result{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.colHeader{
+    width: 25%;
+    margin-bottom: 0.5em;
+
+}
+
+.txtCol{
+    color: white;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
+    padding-left: 1em;
+}
+
+
+.boxResultInfos{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.resultInfos{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.colResult{
+    width: 25%;
+    word-wrap: break-word;
+}
+
+.txtResult{
+    color: white;
+    font-size: 17px;
+    padding-left: 1em;
+}
+
+.containerFormFacture {
+    margin-top: 2em;
+    border-radius: 10px;
+    width: 75%;
+    background: #151e2f;
+}
+
+.boxFormFacture{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contentFormFacture{
+    width: 40%;
+    padding-left: 4em;
+}
+
+.boxTxtFormFacture{
+    width: 40%;
+}
+
+.txtFormFacture{
+    font-size: 2.5rem;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
+    margin: 1em;
+    color: white;
+}
+
 
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
@@ -90,6 +199,7 @@ body{
 
     .boxT-1{
         width: 95%;
+        margin-top: 4em;
         flex-direction: column;
     }
 
@@ -103,6 +213,7 @@ body{
 
     .boxSearch{
         width: 100%;
+        margin-bottom: 1.5em;
     }
 
     .textBanner{
@@ -112,4 +223,56 @@ body{
     .colCard-1{
        margin-top: 1.5em;
     }
+    .iconCard{
+        font-size: 30px;
+    }
+    .textCard{
+        word-wrap: break-word;
+        font-size: 17px;
+        letter-spacing: 0.5px;
+    }
+
+    .containerBottom{
+        margin-top: 10em;
+        height: auto;
+    }
+
+    .resultSearch{
+        height: auto;
+        width: 100%;
+    }
+    .txtCol{
+        padding-left: 0;
+        font-size: 15px;
+    }
+
+    .txtResult{
+        padding-left: 0;
+    }
+    .containerFormFacture{
+        width: 100%;
+        margin-top: 2em;
+    }
+
+    .boxFormFacture{
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+    }
+
+    .contentFormFacture{
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .boxTxtFormFacture{
+        margin-top: 0.5em;
+        width: 100%;
+    }
+
+    .txtFormFacture{
+        font-size: 1.8rem;
+    }
+
+
 }
