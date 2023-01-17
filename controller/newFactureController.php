@@ -26,6 +26,9 @@ if($uri == "/DigitSchool_TFE_2023/index.php?/templates/factures/newFacture" || !
             $_SESSION['infoAdress'] = $infoForm['studentAdress'];
             $_SESSION['infoPostalCode'] = $infoForm['studentPostalCode'];
         }
+        if(!empty($_POST['montantFacture'])){
+            createFacture($conn);
+        }
         var_dump($_SESSION['infoName']);
     }
 }

@@ -44,6 +44,7 @@ function connectUser($conn){
 function disconnect(){
     unset($_SESSION['isLogin']);
     unset($_SESSION['role']);
+    unset($_SESSION['userId']);
     header('Location:/DigitSchool_TFE_2023/index.php?/templates/login/login.php');
 }
 

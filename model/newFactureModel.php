@@ -13,6 +13,23 @@ function getInfoForm($conn,$id){
     return $infoForm;
 };
 
-function createFacture($conn,$id,$nameDesti,$firstNameDesti,$adressDesti,$postalCodeDesti,$communication,$montant){
-
+function createFacture($conn){
+        if($_SESSION['roleSearchBar'] == "student"){
+            $roleId = "studentId";
+        }else{
+            $roleId = "parent";
+        }
+        $query = "insert into facture (factureNameDesti, factureFirstNameDesti, factureAdressDesti, facturePostalCodeDesti,factureCommunication,factureMontant,secretaryID, '$roleId')
+                values  (:factureNameDesti,:factureFirstNameDesti,:factureAdressDesti,:facturePostalCodeDesti,:factureCommunication,:factureMontant,:secretaryId,:'$roleId')";
+        $ajoute = $conn->prepare($query);
+        $ajoute->execute([
+            'factureNameDesti' => htmlentities($_POST['nameDesti']),
+            'factureFirstNameDesti' => htmlentities($_POST['firstNameDesti']),
+            'factureAdressDesti' => htmlentities($_POST['addrDesti']),
+            'facturePostalCodeDesti' => htmlentities($_POST['postalCodeDesti']),
+            'factureCommunication' => htmlentities($_POST['communicationFacture']),
+            'factureMontant' => htmlentities($_POST['montantFacture']),
+            'secretaryId' => $_SESSION['userId'],
+            ''$roleId => $_GET['id']
+        ]);
 }
