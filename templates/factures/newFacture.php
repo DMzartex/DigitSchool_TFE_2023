@@ -55,16 +55,16 @@
             <?php foreach ($_SESSION['resultSearch'] as $result): ?>
                 <div class="boxResultInfos">
                     <div class="colResult">
-                        <a class="txtResult" <?php if(empty($_GET['id'])):?> href="<?=$uri?>&id=<?=$result['studentId']?>"<?php endif;?>><?=$result['studentId']?></a>
+                        <a class="txtResult" <?php if(empty($_GET['id'])):?> href="<?=$uri?>&id=<?=$result[$_SESSION['roleIdSearch']]?>"<?php endif;?>><?=$result[$_SESSION['roleIdSearch']]?></a>
                     </div>
                     <div class="colResult">
-                        <h1 class="txtResult"><?=$result['studentName'] ?></h1>
+                        <h1 class="txtResult"><?=$result['name'] ?></h1>
                     </div>
                     <div class="colResult">
-                        <h1 class="txtResult"><?=$result['studentFirstName']?></h1>
+                        <h1 class="txtResult"><?=$result['firstName']?></h1>
                     </div>
                     <div class="colResult">
-                        <h1 class="txtResult"><?=$result['studentEmail']?></h1>
+                        <h1 class="txtResult"><?=$result['email']?></h1>
                     </div>
                 </div>
             <?php endforeach; ?>

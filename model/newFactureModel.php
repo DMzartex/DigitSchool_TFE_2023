@@ -1,25 +1,25 @@
 <?php
 function getUser($conn,$arr){
-    $stmt = $conn->prepare("select studentId,studentFirstName,studentName,studentEmail FROM student where studentFirstName = '$arr[1]' AND studentName = '$arr[0]'");
-    $stmt->execute();
+    $stmt = $conn->prepare("select $_SESSION[roleIdSearch],firstName,name,email FROM $_SESSION[roleSearchBar] where firstName = :firstName AND name = :name");
+    $stmt->execute([
+        'firstName'=>$arr[1],
+        'name'=>$arr[0]
+    ]);
     $users = $stmt->fetchAll();
     return $users;
 };
 
 function getInfoForm($conn,$id){
-    $stmt = $conn->prepare("SELECT studentName,studentFirstName,studentAdress,studentPostalCode FROM student where studentId = '$id'");
-    $stmt->execute();
+    $stmt = $conn->prepare("SELECT name, firstName, adress, postalCode FROM $_SESSION[roleSearchBar] where $_SESSION[roleIdSearch] = :id");
+    $stmt->execute([
+        'id'=>$id
+    ]);
     $infoForm = $stmt->fetchAll();
     return $infoForm;
 };
 
 function createFacture($conn){
-        if($_SESSION['roleSearchBar'] == "student"){
-            $roleId = "studentId";
-        }else{
-            $roleId = "parent";
-        }
-        $query = "insert into facture (factureNameDesti, factureFirstNameDesti, factureAdressDesti, facturePostalCodeDesti,factureCommunication,factureMontant,secretaryID, '$roleId')
+        $query = "insert into facture (name, factureFirstNameDesti, factureAdressDesti, facturePostalCodeDesti,factureCommunication,factureMontant,secretaryID, '$roleId')
                 values  (:factureNameDesti,:factureFirstNameDesti,:factureAdressDesti,:facturePostalCodeDesti,:factureCommunication,:factureMontant,:secretaryId,:'$roleId')";
         $ajoute = $conn->prepare($query);
         $ajoute->execute([
@@ -30,6 +30,7 @@ function createFacture($conn){
             'factureCommunication' => htmlentities($_POST['communicationFacture']),
             'factureMontant' => htmlentities($_POST['montantFacture']),
             'secretaryId' => $_SESSION['userId'],
-            ''$roleId => $_GET['id']
+            $roleId => $_GET['id']
         ]);
 }
+

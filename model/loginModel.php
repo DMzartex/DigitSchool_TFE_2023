@@ -6,21 +6,19 @@ function connectUser($conn){
                 $email = trim($_POST['mailLogin']);
                 $email = stripslashes($email);
                 $email = htmlspecialchars($email);
-                $roleEmail = $_POST['role']."Email";
                 $roleId = $_POST['role']."Id";
-                $stmtEmail = $conn->prepare("SELECT * FROM $_POST[role] WHERE $roleEmail='$email'");
+                $stmtEmail = $conn->prepare("SELECT * FROM $_POST[role] WHERE email='$email'");
                 $stmtEmail->execute();
                 $user = $stmtEmail->fetch();
                 if($user){
                     $_SESSION['userId'] = $user[$roleId];
-                    $rolePassword = $_POST['role']."Password";
                     $password = htmlspecialchars($_POST['passLogin']);
-                    $stmtPassword = $conn->prepare("SELECT $rolePassword FROM $_POST[role] WHERE $roleEmail='$email'");
+                    $stmtPassword = $conn->prepare("SELECT password FROM $_POST[role] WHERE email='$email'");
                     $stmtPassword->execute();
                     $userPassword = $stmtPassword->fetch();
-                    $hash = $userPassword[$rolePassword];
-                    $passwordVerify = password_verify($password,$hash);
-                    if($passwordVerify){
+                    $hash = $userPassword['password'];
+                   /* $passwordVerify = password_verify($password,$hash);*/
+                    if($userPassword['password'] == $password /*$passwordVerify*/){
                         $_SESSION['role'] = htmlspecialchars($_POST['role']);
                         $_SESSION['isLogin'] = true;
                         header('Location:/DigitSchool_TFE_2023/index.php?/templates/users/workSpace.php');

@@ -26,7 +26,7 @@
     </div>
     <?php if(empty($_POST['nomDesti'])): ?>
         <div class="btnSend">
-            <button type="submit" name="send" id="btnSend">Envoyer</button>
+            <button type="submit" name="sendFacture" id="btnSend">Envoyer</button>
         </div>
     <?php endif; ?>
     <?php if(!empty($_POST['nomDesti'])): ?>
