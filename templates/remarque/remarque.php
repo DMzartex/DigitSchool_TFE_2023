@@ -1,11 +1,19 @@
-<div class="fullContent">
+<link rel="stylesheet" href="css/remarque.css">
+<div class="rmFullContent">
     <div class="rmSearchContent">
         <div class="rmTxtContent">
-            <h1 class="rmTxt"><span class="textGreen">Rechercher un élève</span> ou un parent d'élève <span class="textGreen">en un click</span></h1>
+            <h1 class="txtPInter"><span class="textGreen">Rechercher un élève</span> pour obtenir la liste des remarques. <span class="textGreen">Ajouté, supprimé et moddifer</span> des remarques <span class="textGreen">à tout moments.</span></h1>
         </div>
         <div class="rmSearchBarContent">
             <?php require_once 'components/searchBar.php'?>
         </div>
     </div>
-    <div class=""></div>
+    <div class="rmResultContent">
+        <div class="rmB1">
+
+        </div>
+        <div class="rmB2">
+
+        </div>
+    </div>
 </div>

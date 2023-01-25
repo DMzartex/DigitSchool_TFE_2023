@@ -1,0 +1,55 @@
+body{
+    background: #0A092D;
+}
+
+.rmFullContent{
+    width: 100%;
+    background: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rmSearchContent{
+    background: yellow;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: auto;
+}
+
+.rmTxtContent{
+    width: 50%;
+    background: #0075FF;
+    border-right: 1px solid white;
+}
+
+.rmSearchBarContent{
+    width: 50%;
+    background: #455468;
+}
+
+.rmTxt{
+    font-size: 2em;
+}
+
+.rmResultContent{
+    width: 80%;
+    height: 20em;
+    background: #161b2a;
+    display: flex;
+    flex-direction: row;
+}
+
+.rmB1{
+    width: 50%;
+    height: 100%;
+    border-right: 1px solid white;
+}
+
+.rmB2{
+    width: 50%;
+    height: 100%;
+}
+
+
