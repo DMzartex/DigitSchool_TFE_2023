@@ -40,9 +40,11 @@ function connectUser($conn){
 }
 
 function disconnect(){
+    /*
     unset($_SESSION['isLogin']);
     unset($_SESSION['role']);
-    unset($_SESSION['userId']);
+    unset($_SESSION['userId']);*/
+    session_destroy();
     header('Location:/DigitSchool_TFE_2023/index.php?/templates/login/login.php');
 }
 

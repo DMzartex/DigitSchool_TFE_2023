@@ -1,36 +1,48 @@
 <?php
-function getUser($conn,$arr){
-    $stmt = $conn->prepare("select $_SESSION[roleIdSearch],firstName,name,email FROM $_SESSION[roleSearchBar] where firstName = :firstName AND name = :name");
-    $stmt->execute([
-        'firstName'=>$arr[1],
-        'name'=>$arr[0]
-    ]);
-    $users = $stmt->fetchAll();
-    return $users;
-};
 
 function getInfoForm($conn,$id){
-    $stmt = $conn->prepare("SELECT name, firstName, adress, postalCode FROM $_SESSION[roleSearchBar] where $_SESSION[roleIdSearch] = :id");
+    $role =  preg_replace("/[^a-zA-Z0-9]/", "", $_SESSION['roleSearchBar']);
+    $roleIdSearch =  preg_replace("/[^a-zA-Z0-9]/", "", $_SESSION['roleIdSearch']);
+    $stmt = $conn->prepare("SELECT name, firstName, adress, postalCode FROM $role where $roleIdSearch = :id");
     $stmt->execute([
-        'id'=>$id
+        'id'=>$id,
     ]);
     $infoForm = $stmt->fetchAll();
     return $infoForm;
 };
 
-function createFacture($conn){
-        $query = "insert into facture (name, factureFirstNameDesti, factureAdressDesti, facturePostalCodeDesti,factureCommunication,factureMontant,secretaryID, '$roleId')
-                values  (:factureNameDesti,:factureFirstNameDesti,:factureAdressDesti,:facturePostalCodeDesti,:factureCommunication,:factureMontant,:secretaryId,:'$roleId')";
+function getIdSendFacture($conn,$role2){
+    $roleIdSearch =  preg_replace("/[^a-zA-Z0-9]/", "", $_SESSION['roleIdSearch']);
+    $role2 = preg_replace("/[^a-zA-Z0-9]/", "", $role2);
+    $id = preg_replace("/[^a-zA-Z0-9]/", "", $_GET['id']);
+    $query = $conn->prepare("SELECT $role2 FROM student_parent WHERE $roleIdSearch = :id ");
+    $query->execute([
+       'id' => $id
+    ]);
+    $idResult = $query->fetchColumn();
+    return $idResult;
+}
+
+function createFacture($conn,$id1,$id2){
+        $id1 = preg_replace("/[^a-zA-Z0-9]/", "", $id1);
+        $id2 = preg_replace("/[^a-zA-Z0-9]/", "", $id2);
+        $userId = preg_replace("/[^a-zA-Z0-9]/", "", $_SESSION['userId']);
+        $query = "insert into facture (name, firstName, adress, postalCode,communication,montant,paye,secretaryId,studentId,parentId)
+                values  (:name,:firstName,:adress,:postalCode,:communication,:montant,:paye,:secretaryId,:studentId,:parentId)";
         $ajoute = $conn->prepare($query);
         $ajoute->execute([
-            'factureNameDesti' => htmlentities($_POST['nameDesti']),
-            'factureFirstNameDesti' => htmlentities($_POST['firstNameDesti']),
-            'factureAdressDesti' => htmlentities($_POST['addrDesti']),
-            'facturePostalCodeDesti' => htmlentities($_POST['postalCodeDesti']),
-            'factureCommunication' => htmlentities($_POST['communicationFacture']),
-            'factureMontant' => htmlentities($_POST['montantFacture']),
-            'secretaryId' => $_SESSION['userId'],
-            $roleId => $_GET['id']
+            'name' => htmlentities($_POST['nameDesti']),
+            'firstName' => htmlentities($_POST['firstNameDesti']),
+            'adress' => htmlentities($_POST['addrDesti']),
+            'postalCode' => htmlentities($_POST['postalCodeDesti']),
+            'communication' => htmlentities($_POST['communicationFacture']),
+            'montant' => htmlentities($_POST['montantFacture']),
+            'paye' => false,
+            'secretaryId' => $userId,
+            'studentId' => $id1,
+            'parentId' => $id2
         ]);
 }
+
+
 

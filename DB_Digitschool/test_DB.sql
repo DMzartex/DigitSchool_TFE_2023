@@ -36,3 +36,5 @@ Values('Gauthier','Sandrine','gauthiersandrine@gmail.com','gauthier123','Rue de 
 
 insert into parent(name,firstName,email,password,adress,postalCode,ville,phoneNumber,birthDate,function,responsablePay)
 Values('Michaux','Yves','michauxyves@gmail.com','michaux123','22 Rue edouard','5300','Andenne','0475354829','1970-12-08 00:00:00','parent',true);
+
+insert into student_parent (studentId,parentId) values(1,1);

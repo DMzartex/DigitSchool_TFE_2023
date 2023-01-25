@@ -24,7 +24,7 @@
         <label for="montant" class="labelFormFact">Montant de la facture :</label>
         <input class="input" type="text" name="montantFacture" id="montant">
     </div>
-    <?php if(empty($_POST['nomDesti'])): ?>
+    <?php if(empty($_POST['nameDesti'])): ?>
         <div class="btnSend">
             <button type="submit" name="sendFacture" id="btnSend">Envoyer</button>
         </div>
