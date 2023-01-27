@@ -5,8 +5,8 @@ if($uri == "/DigitSchool_TFE_2023/index.php?/templates/factures/newFacture" || !
     if(!empty($_POST['role'])){
         $_SESSION['roleSearchBar'] = $_POST['role'];
         $_SESSION['roleIdSearch']  = $_POST['role'].'Id';
-        if(!empty($_POST['nameFirstName'])){
-            $_SESSION['userSearchBar'] = $_POST['nameFirstName'];
+        if(!empty($_POST['inputSearch'])){
+            $_SESSION['userSearchBar'] = $_POST['inputSearch'];
             $arr = explode(' ',$_SESSION['userSearchBar']);
             $result = getUser($conn,$arr);
             $_SESSION['resultSearch'] = $result;
