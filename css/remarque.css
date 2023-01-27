@@ -1,0 +1,111 @@
+body{
+    background: #0A092D;
+}
+
+.rmFullContent{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3em;
+}
+
+.rmSearchContent{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: auto;
+}
+
+.rmTxtContent{
+    width: 50%;
+    background: #151E2F;
+    border-right: 1px solid white;
+}
+
+.rmSearchBarContent{
+    width: 50%;
+    background: #151E2F;
+}
+
+.rmTxt-1{
+    margin: 0.5em;
+}
+
+.rmResultContent{
+    width: 80%;
+    height: 20em;
+    background: #161b2a;
+    display: flex;
+    flex-direction: row;
+}
+
+.rmB1{
+    width: 50%;
+    height: auto;
+    border-right: 1px solid white;
+    background: #151E2F;
+}
+
+.rmB2{
+    width: 50%;
+    height: auto;
+    background: #151E2F;
+}
+
+.rmB1-txt{
+    width: 25%;
+    border-bottom: 1px solid white;
+}
+
+.rmB1-txt{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.8rem;
+    color: white;
+    margin: 0.5em;
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+    .rmSearchContent{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rmSearchContent{
+        width: 100%;
+    }
+
+    .boxSearchBar{
+      margin-bottom: 2em;
+    }
+
+    .rmTxtContent ,.rmSearchBarContent{
+        width: 90%;
+    }
+
+    .rmTxtContent{
+        border-right: 0px;
+    }
+
+    .rmResultContent{
+        width: 90%;
+        flex-direction: column;
+    }
+    .rmB1,.rmB2{
+        width: 100%;
+    }
+
+    .rmB1{
+        border-right: 0px;
+    }
+    .rmB1-txt{
+        width: 55%;
+    }
+
+    .txtPInter{
+        font-size: 2rem;
+    }
+
+}
+

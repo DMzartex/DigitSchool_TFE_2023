@@ -51,6 +51,19 @@
 }
 
 
+/* TXT */
+
+.textGreen{
+    color: #93CBA3;
+}
+
+.txtPInter{
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    color: white;
+}
+
+
 /* formulaire */
 
 .input{
