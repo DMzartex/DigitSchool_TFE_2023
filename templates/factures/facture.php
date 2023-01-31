@@ -7,7 +7,7 @@
             </div>
             <?php if($_SESSION['role'] == "secretary"): ?>
                 <div class="containerHeaderSearchBar">
-                    <?php require_once 'components/searchBar.php'; ?>
+                    <?php require_once './components/searchBar.php'; ?>
                 </div>
             <?php endif; ?>
         </div>

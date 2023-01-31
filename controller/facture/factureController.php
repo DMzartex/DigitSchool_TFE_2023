@@ -2,6 +2,8 @@
 $uri = $_SERVER['REQUEST_URI'];
 
 if($uri == "/DigitSchool_TFE_2023/index.php?/templates/factures/facture"){
+    $selectSearchBar = true;
+
     if(!empty($_POST['role'])){
         $_SESSION['roleSearchBar'] = $_POST['role'];
         $_SESSION['roleIdSearch']  = $_POST['role'].'Id';
