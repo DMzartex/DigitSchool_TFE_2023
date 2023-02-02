@@ -17,3 +17,24 @@ function getIdStudent_Parent($conn,$id){
     return $result;
 }
 
+function getNameStudent($conn){
+    $idStudent_parent = $_SESSION['idStudent_parent'];
+    $index = 0;
+    foreach ($idStudent_parent as $idStudent){
+        var_dump($idStudent['studentId']);
+        // Boucle for si la boucle foreach ne suffit pas.
+        $query = $conn->prepare("SELECT name FROM student where studentId = :id");
+        $query->execute([
+            'id' => $idStudent['studentId']
+        ]);
+        $resultName = $query->fetchAll();
+        var_dump($resultName);
+
+        foreach ($resultName as $name){
+            $nameStudent[$index] = $name['name'];
+            $index += 1;
+        }
+    }
+    return $nameStudent;
+}
+
