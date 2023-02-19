@@ -3,10 +3,12 @@
         <h1 class="textInfoSearchBar">Inscrivez <span class="textGreen">le matricule </span>d'un utilisateur.</h1>
     </div>
     <div class="boxSelectFacture">
-        <select class="selectRole form-select form-select-md" name="role" aria-label="Default select example">
+        <select class="selectSearch form-select form-select-md" name="role" aria-label="Default select example">
             <option selected value="none">Choisissez un rôle :</option>
             <option value="student">Etudiant</option>
-            <option value="parent">Parent</option>
+            <?php if($selectSearchBar):?>
+                <option value="parent">Parent</option>
+            <?php endif; ?>
         </select>
     </div>
 

@@ -1,9 +1,23 @@
 <link rel="stylesheet" href="css/facture.css">
+<<<<<<< HEAD
 <div class="containerFull">
     <div class="BlockHeaderFacture">
         <div class="containerTitle">
             <p class="TitleFacture">il n'a <span class="textGreen">jamais</span> été aussi <span class="textGreen">simple</span> de payer une facture</p>
             <p class="SecTitleFacture">grâce à notre <span class="textGreen">partenaire STRIPE</span></p>
+=======
+    <div class="containerFull">
+        <div class="BlockHeaderFacture">
+            <div class="containerTitle">
+                <p class="TitleFacture">il n'a <span class="textGreen">jamais</span> été aussi <span class="textGreen">simple</span><br> payer une facture</p>
+                <p class="SecTitleFacture">grâce à notre <span class="textGreen">partenaire STRIPE</span></p>
+            </div>
+            <?php if($_SESSION['role'] == "secretary"): ?>
+                <div class="containerHeaderSearchBar">
+                    <?php require_once './components/searchBar.php'; ?>
+                </div>
+            <?php endif; ?>
+>>>>>>> 449b43a5378809245a837accea3eb2dae8694155
         </div>
         <!-- si parents ou éleves alors afficher cette partie -->
         <?php if($_SESSION['role'] == "parent" || $_SESSION['role'] == "student"): ?>

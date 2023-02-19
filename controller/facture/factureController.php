@@ -2,7 +2,13 @@
 $uri = $_SERVER['REQUEST_URI'];
 
 if($uri == "/DigitSchool_TFE_2023/index.php?/templates/factures/facture"){
+<<<<<<< HEAD:controller/factureController.php
     if(isset($_POST['role'])){
+=======
+    $selectSearchBar = true;
+
+    if(!empty($_POST['role'])){
+>>>>>>> 449b43a5378809245a837accea3eb2dae8694155:controller/facture/factureController.php
         $_SESSION['roleSearchBar'] = $_POST['role'];
         $_SESSION['roleIdSearch']  = $_POST['role'].'Id';
         if(isset($_POST['inputSearch'])){
