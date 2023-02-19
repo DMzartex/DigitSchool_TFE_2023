@@ -1,7 +1,7 @@
 /*IMPORT*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 body{
-    background-color: #0A092D;
+    background-color: #050528;
     font-family: 'Roboto';
 }
 
@@ -19,22 +19,20 @@ body{
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     justify-items: center;
 }
 
 .blocFacture{
     letter-spacing: 1px;
     border-radius: 5px;
-    height: auto;
-    width: auto;
+    height: 50vh;
+    width: 20%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     color: whitesmoke;
     background-color: #222e43;
-    margin-bottom: 5vh;
-    margin-top: 5vh;
+    margin: 2em;
     justify-content: space-around;
 }
 
@@ -44,7 +42,6 @@ p{
 
 .factureFirstNameDesti{
     margin-left: 5%;
-    margin-top: 5%;
 }
 
 .factureNameDesti{
@@ -99,8 +96,12 @@ p{
     color: white;
 }
 
-.textGreen{
-    color: #62BDA3;
+.bckgColorGreen{
+    background-color: #62BDA3;
+}
+
+.bckgColorRed{
+    background-color: #ff235e;
 }
 
 .containerTitle{
@@ -113,6 +114,7 @@ p{
 
 .containerHeaderSearchBar{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     width: 40%;
     border: 1px solid black;
@@ -130,10 +132,7 @@ p{
 .BtnPayerFacture{
     border: 1px solid black;
     border-radius: 5px;
-    margin-right: 5%;
-    margin-left: 5%;
-    margin-bottom: 5%;
-    background-color: #62BDA3;
+    margin: 0.5em;
     color: black;
     cursor: pointer;
 }
@@ -142,6 +141,57 @@ form{
     margin: 1em;
 }
 
+.boxT-2{
+    width: auto;
+    height: auto;
+    border: 1px solid black;
+}
+
+.colCard-1{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+}
+.colCard-2{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.card{
+    background: #151e2f;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textCard{
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
+    word-wrap: break-word;
+}
+
+.iconCard{
+    color: white;
+    font-size: 40px;
+}
+
+.btnFacture{
+    width: auto;
+    margin: 1.5em;
+    text-decoration: underline;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    color: #62BDA3;
+}
 
 /*MOBILE*/
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px){
@@ -171,6 +221,21 @@ form{
     .blocFacture{
         width: 90%;
     }
+
+    .card{
+        margin: 1em;
+        border: 0;
+    }
+
+    .textCard{
+        font-size: 14px;
+        letter-spacing: 1.5px;
+    }
+
+    .iconCard{
+        font-size: 30px;
+    }
+
 }
 
 @media only screen and (min-device-width : 481px) and (max-device-width : 1024px){
@@ -201,6 +266,15 @@ form{
 
     .blocFacture{
         width: 90%;
+    }
+
+    .textCard{
+        font-size: 0.8em;
+    }
+
+    .iconCard{
+        color: white;
+        font-size: 30px;
     }
 
 }
