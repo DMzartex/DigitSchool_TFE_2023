@@ -47,5 +47,3 @@ function disconnect(){
     session_destroy();
     header('Location:/DigitSchool_TFE_2023/index.php?/templates/login/login.php');
 }
-
-?>

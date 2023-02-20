@@ -11,18 +11,6 @@ function getInfoForm($conn,$id){
     return $infoForm;
 };
 
-function getIdSendFacture($conn,$role2){
-    $roleIdSearch =  preg_replace("/[^a-zA-Z0-9]/", "", $_SESSION['roleIdSearch']);
-    $role2 = preg_replace("/[^a-zA-Z0-9]/", "", $role2);
-    $id = preg_replace("/[^a-zA-Z0-9]/", "", $_GET['id']);
-    $query = $conn->prepare("SELECT $role2 FROM student_parent WHERE $roleIdSearch = :id ");
-    $query->execute([
-       'id' => $id
-    ]);
-    $idResult = $query->fetchColumn();
-    return $idResult;
-}
-
 function createFacture($conn,$id1,$id2){
         $id1 = preg_replace("/[^a-zA-Z0-9]/", "", $id1);
         $id2 = preg_replace("/[^a-zA-Z0-9]/", "", $id2);

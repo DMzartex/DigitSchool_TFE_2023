@@ -24,11 +24,11 @@ if($uri == "/DigitSchool_TFE_2023/index.php?/templates/factures/newFacture" || !
             if($_SESSION['roleSearchBar'] == "student"){
                 $id1 = $_GET['id'];
                 $role2 = "parentId";
-                $id2 = getIdSendFacture($conn,$role2);
+                $id2 = getSecondId($conn,$role2,$id1);
             }else if ($_SESSION['roleSearchBar'] == "parent"){
                 $id2 = $_GET['id'];
                 $role2 = "studentId";
-                $id1 = getIdSendFacture($conn,$role2);
+                $id1 = getSecondId($conn,$role2,$id2);
             }
             if(isset($_POST['sendFacture'])){
                 createFacture($conn,$id1,$id2);

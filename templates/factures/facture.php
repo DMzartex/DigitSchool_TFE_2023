@@ -1,23 +1,9 @@
 <link rel="stylesheet" href="css/facture.css">
-<<<<<<< HEAD
 <div class="containerFull">
     <div class="BlockHeaderFacture">
         <div class="containerTitle">
             <p class="TitleFacture">il n'a <span class="textGreen">jamais</span> été aussi <span class="textGreen">simple</span> de payer une facture</p>
             <p class="SecTitleFacture">grâce à notre <span class="textGreen">partenaire STRIPE</span></p>
-=======
-    <div class="containerFull">
-        <div class="BlockHeaderFacture">
-            <div class="containerTitle">
-                <p class="TitleFacture">il n'a <span class="textGreen">jamais</span> été aussi <span class="textGreen">simple</span><br> payer une facture</p>
-                <p class="SecTitleFacture">grâce à notre <span class="textGreen">partenaire STRIPE</span></p>
-            </div>
-            <?php if($_SESSION['role'] == "secretary"): ?>
-                <div class="containerHeaderSearchBar">
-                    <?php require_once './components/searchBar.php'; ?>
-                </div>
-            <?php endif; ?>
->>>>>>> 449b43a5378809245a837accea3eb2dae8694155
         </div>
         <!-- si parents ou éleves alors afficher cette partie -->
         <?php if($_SESSION['role'] == "parent" || $_SESSION['role'] == "student"): ?>
@@ -51,6 +37,7 @@
                 <?php require_once 'components/searchBar.php'; ?>
                 <a class="btnFacture" href="index.php?/templates/factures/newFacture">Créé une facture</a>
             </div>
+
         <?php endif; ?>
     </div>
 
@@ -60,36 +47,33 @@
             <p>En attente de payement</p>
         </div>
         <!-- Afficher les factures si elle ne sont pas payé -->
-        <?php if(isset($_SESSION['resultFacture'])): ?>
-            <?php foreach ($_SESSION['resultFacture'] as $resultFacture): ?>
-                <?php if($resultFacture['paye'] === 0): ?>
-                    <div class="blocFacture">
-                        <p class="factureNameDesti">Nom : <?=$resultFacture['name'] ?></p>
-                        <p class="factureFirstNameDesti">Prenom : <?= $resultFacture['firstName'] ?></p>
-                        <p class="factureAdressDesti">Adresse : <?= $resultFacture['adress'] ?></p>
-                        <p class="facturePostalCodeDesti">Code Postal : <?= $resultFacture['postalCode'] ?></p>
-                        <p class="descritptionFacture">Description : <?= $resultFacture['communication'] ?></p>
-                        <p class="montantFacture">Montant : <?= $resultFacture['montant'] ?> €</p>
+        <?php foreach ($_SESSION['resultFacture'] as $resultFacture): ?>
+            <?php if($resultFacture['paye'] === 0): ?>
+                <div class="blocFacture">
+                    <p class="factureNameDesti">Nom : <?=$resultFacture['name'] ?></p>
+                    <p class="factureFirstNameDesti">Prenom : <?= $resultFacture['firstName'] ?></p>
+                    <p class="factureAdressDesti">Adresse : <?= $resultFacture['adress'] ?></p>
+                    <p class="facturePostalCodeDesti">Code Postal : <?= $resultFacture['postalCode'] ?></p>
+                    <p class="descritptionFacture">Description : <?= $resultFacture['communication'] ?></p>
+                    <p class="montantFacture">Montant : <?= $resultFacture['montant'] ?> €</p>
 
-                        <!-- Si parent ou éleve, ils ont le bouton payés -->
-                        <?php if($_SESSION['role'] == "parent" || $_SESSION['role'] == "student"): ?>
-                            <button class="BtnPayerFacture">PAYER</button>
-                        <?php endif; ?>
-                        <!-- Si secrétaire, il a le bouton modifié -->
-                        <?php if($_SESSION['role'] == "secretary") : ?>
-                            <button class="BtnPayerFacture bckgColorGreen">Modifier</button>
-                            <button class="BtnPayerFacture bckgColorRed">Supprimer</button>
-                        <?php endif; ?>
-                    </div>
-                <?php endif; ?>
-            <?php endforeach; ?>
-        <?php endif; ?>
+                    <!-- Si parent ou éleve, ils ont le bouton payés -->
+                    <?php if($_SESSION['role'] == "parent" || $_SESSION['role'] == "student"): ?>
+                        <button class="BtnPayerFacture bckgColorGreen">PAYER</button>
+                    <?php endif; ?>
+                    <!-- Si secrétaire, il a le bouton modifié -->
+                    <?php if($_SESSION['role'] == "secretary") : ?>
+                        <button class="BtnPayerFacture bckgColorGreen">Modifier</button>
+                        <button class="BtnPayerFacture bckgColorRed">Supprimer</button>
+                    <?php endif; ?>
+                </div>
+            <?php endif; ?>
+        <?php endforeach; ?>
 
         <div class="BlocTitleFacture">
             <p>Historique de payement</p>
         </div>
         <!-- Afficher les factures si elle sont payé -->
-        <?php if(isset($_SESSION['resultFacture'])): ?>
         <?php foreach ($_SESSION['resultFacture'] as $resultFacture): ?>
             <?php if($resultFacture['paye'] === 1): ?>
                 <div class="blocFacture">
@@ -102,6 +86,5 @@
                 </div>
             <?php endif; ?>
         <?php endforeach; ?>
-        <?php endif; ?>
     </div>
 </div>
