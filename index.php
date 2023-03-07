@@ -4,7 +4,6 @@ session_start();
 $uri = $_SERVER['REQUEST_URI'];
 $selectSearchBar = true;
 $txtSearchBar = true;
-
 /*require*/
 require_once 'config/connect.php';
 require_once 'model/login/loginModel.php';
@@ -33,6 +32,7 @@ require_once('vendor/autoload.php'); // Charge la bibliothèque Stripe PHP
       <link rel="stylesheet" href="css/searchBar.css">
   </head>
   <body>
+
     <?php require_once 'components/header.php' ?>
     <?php require_once 'controller/users/usersController.php' ?>
     <?php require_once 'controller/facture/factureController.php' ?>
