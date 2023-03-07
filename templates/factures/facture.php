@@ -47,44 +47,47 @@
             <p>En attente de payement</p>
         </div>
         <!-- Afficher les factures si elle ne sont pas payé -->
-        <?php foreach ($_SESSION['resultFacture'] as $resultFacture): ?>
-            <?php if($resultFacture['paye'] === 0): ?>
-                <div class="blocFacture">
-                    <p class="factureNameDesti">Nom : <?=$resultFacture['name'] ?></p>
-                    <p class="factureFirstNameDesti">Prenom : <?= $resultFacture['firstName'] ?></p>
-                    <p class="factureAdressDesti">Adresse : <?= $resultFacture['adress'] ?></p>
-                    <p class="facturePostalCodeDesti">Code Postal : <?= $resultFacture['postalCode'] ?></p>
-                    <p class="descritptionFacture">Description : <?= $resultFacture['communication'] ?></p>
-                    <p class="montantFacture">Montant : <?= $resultFacture['montant'] ?> €</p>
-
-                    <!-- Si parent ou éleve, ils ont le bouton payés -->
-                    <?php if($_SESSION['role'] == "parent" || $_SESSION['role'] == "student"): ?>
-                        <button class="BtnPayerFacture bckgColorGreen">PAYER</button>
-                    <?php endif; ?>
-                    <!-- Si secrétaire, il a le bouton modifié -->
-                    <?php if($_SESSION['role'] == "secretary") : ?>
-                        <button class="BtnPayerFacture bckgColorGreen">Modifier</button>
-                        <button class="BtnPayerFacture bckgColorRed">Supprimer</button>
-                    <?php endif; ?>
-                </div>
-            <?php endif; ?>
-        <?php endforeach; ?>
+        <?php if(!empty($_SESSION['resultFacture'])): ?>
+            <?php foreach ($_SESSION['resultFacture'] as $resultFacture): ?>
+                <?php if($resultFacture['paye'] === 0): ?>
+                    <div class="blocFacture">
+                        <p class="factureNameDesti">Nom : <?=$resultFacture['name'] ?></p>
+                        <p class="factureFirstNameDesti">Prenom : <?= $resultFacture['firstName'] ?></p>
+                        <p class="factureAdressDesti">Adresse : <?= $resultFacture['adress'] ?></p>
+                        <p class="facturePostalCodeDesti">Code Postal : <?= $resultFacture['postalCode'] ?></p>
+                        <p class="descritptionFacture">Description : <?= $resultFacture['communication'] ?></p>
+                        <p class="montantFacture">Montant : <?= $resultFacture['montant'] ?> €</p>
+                        <!-- Si parent ou éleve, ils ont le bouton payés -->
+                        <?php if($_SESSION['role'] == "parent" || $_SESSION['role'] == "student"): ?>
+                            <a href="index.php?/templates/payement/payement&factureId=<?=$resultFacture['factureId']?>" class="BtnPayerFacture bckgColorGreen">PAYER</a>
+                        <?php endif; ?>
+                        <!-- Si secrétaire, il a le bouton modifié -->
+                        <?php if($_SESSION['role'] == "secretary") : ?>
+                            <button class="BtnPayerFacture bckgColorGreen">Modifier</button>
+                            <button class="BtnPayerFacture bckgColorRed">Supprimer</button>
+                        <?php endif; ?>
+                    </div>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        <?php endif; ?>
 
         <div class="BlocTitleFacture">
             <p>Historique de payement</p>
         </div>
         <!-- Afficher les factures si elle sont payé -->
-        <?php foreach ($_SESSION['resultFacture'] as $resultFacture): ?>
-            <?php if($resultFacture['paye'] === 1): ?>
-                <div class="blocFacture">
-                    <p class="factureNameDesti">Nom : <?=$resultFacture['name'] ?></p>
-                    <p class="factureFirstNameDesti">Prenom : <?= $resultFacture['firstName'] ?></p>
-                    <p class="factureAdressDesti">Adresse : <?= $resultFacture['adress'] ?></p>
-                    <p class="facturePostalCodeDesti">Code Postal : <?= $resultFacture['postalCode'] ?></p>
-                    <p class="descritptionFacture">Description : <?= $resultFacture['communication'] ?></p>
-                    <p class="montantFacture">Montant : <?= $resultFacture['montant'] ?> €</p>
-                </div>
-            <?php endif; ?>
-        <?php endforeach; ?>
+        <?php if(!empty($_SESSION['resultFacture'])): ?>
+            <?php foreach ($_SESSION['resultFacture'] as $resultFacture): ?>
+                <?php if($resultFacture['paye'] === 1): ?>
+                    <div class="blocFacture">
+                        <p class="factureNameDesti">Nom : <?=$resultFacture['name'] ?></p>
+                        <p class="factureFirstNameDesti">Prenom : <?= $resultFacture['firstName'] ?></p>
+                        <p class="factureAdressDesti">Adresse : <?= $resultFacture['adress'] ?></p>
+                        <p class="facturePostalCodeDesti">Code Postal : <?= $resultFacture['postalCode'] ?></p>
+                        <p class="descritptionFacture">Description : <?= $resultFacture['communication'] ?></p>
+                        <p class="montantFacture">Montant : <?= $resultFacture['montant'] ?> €</p>
+                    </div>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        <?php endif;?>
     </div>
 </div>
