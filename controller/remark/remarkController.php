@@ -37,7 +37,6 @@ if($uri == "/DigitSchool_TFE_2023/index.php?/templates/remarque/remarque"){
         $_SESSION['idStudent_parent'] = getIdStudent_Parent($conn,$id);
         $_SESSION['resultNameStudent'] = getNameStudent($conn);
         var_dump($_SESSION['idStudent_parent']);
-        require_once 'components/selectStudent.php';
         var_dump($_SESSION['resultNameStudent']);
         // faire un select avec la possiblité de choisir un des ces enfants et afficher les remarques.
     }

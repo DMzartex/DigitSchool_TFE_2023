@@ -1,10 +1,10 @@
 
 <?php
-require_once 'class/StripePayement.php';
 $_SESSION['factureId'] = $_GET['factureId'];
+require_once 'class/StripePayement.php';
 $facture = getFactureById($conn);
 foreach ($facture as $infoFacture){
-    $communication = $infoFacture['communication'];
+    $communication = $infoFacture['factureId'];
     $montant = $infoFacture['montant'];
 }
 // Exemple d'utilisation
@@ -13,7 +13,8 @@ $stripePayment->createCheckoutSession(
     "$communication",
     $montant, // Prix en centimes (ici, 15€)
     'http://localhost/DigitSchool_TFE_2023/index.php?/templates/payement/successPayement',
-    'https://votre-site.com/cancel'
+    'https://votre-site.com/cancel',
+    $conn
 );
 
 

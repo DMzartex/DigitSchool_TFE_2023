@@ -2,6 +2,8 @@ body{
     background: #0A092D;
 }
 
+/*----------------------------1. header de la page-----------------------------------------*/
+
 .rmFullContent{
     width: 100%;
     display: flex;
@@ -17,95 +19,418 @@ body{
     height: auto;
 }
 
-.rmTxtContent{
-    width: 50%;
+.rmSearchBarContent{
+    width: 70%;
     background: #151E2F;
-    border-right: 1px solid white;
+    padding: 5vh;
 }
 
-.rmSearchBarContent{
-    width: 50%;
+.rmTxtContent{
+    width: 40%;
     background: #151E2F;
+    border-right: 1px solid white;
 }
 
 .rmTxt-1{
-    margin: 0.5em;
+    padding: 0.5em;
 }
+
+.rmHeader2{
+    width: 60%;
+    background: #151E2F;
+}
+
+.btnNewremarque{
+    display: flex;
+    width: auto;
+    margin: 1.5em;
+    text-decoration: underline;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    color: #62BDA3;
+}
+
+/*BOX IMAGES*/
+
+.boxT-3{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-basis: 100%;
+    height: 50%;
+    border: 1px solid black;
+}
+
+.colCard{
+    width: 80%;
+    display: flex;
+}
+
+.card{
+    background: #151e2f;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+}
+
+.textCard{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
+    word-wrap: break-word;
+    padding: 1vh;
+}
+
+.iconCard{
+    color: whitesmoke;
+    font-size: 40px;
+    padding: 1vh;
+}
+
+/*----------------------------2. Filtre de la page-----------------------------------------*/
+
+.rmSearchClass{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    height: auto;
+    font-family: 'Roboto';
+    margin-top: 1em;
+    color: white;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+}
+
+.rmSearchTitle{
+    width: 80%;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+    font-size: 25px;
+    letter-spacing: 2px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rmSearch{
+    margin-right: 1vh;
+    margin-bottom: 1vh;
+    width: 20%;
+    height: 5vh;
+    display: flex;
+}
+
+.rmSearchBtn{
+    justify-content: center;
+    text-transform: uppercase;
+    display: flex;
+    width: 20%;
+    height: 5vh;
+    background-color: #62BDA3;
+    color: black;
+    border: 1px Solid black;
+    border-radius: 5px;
+}
+
+/*----------------------------3. Corp de page-----------------------------------------*/
 
 .rmResultContent{
     width: 80%;
-    height: 20em;
-    background: #161b2a;
+    height: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background: #151E2F;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
-.rmB1{
-    width: 50%;
-    height: auto;
-    border-right: 1px solid white;
-    background: #151E2F;
-}
-
-.rmB2{
-    width: 50%;
-    height: auto;
-    background: #151E2F;
-}
-
-.rmB1-txt{
-    width: 25%;
-    border-bottom: 1px solid white;
-}
-
-.rmB1-txt{
-    font-family: 'Inter', sans-serif;
-    font-size: 1.8rem;
+.rmCase{
     color: white;
-    margin: 0.5em;
+    border: 1px solid black;
+    display: flex;
 }
 
+.rmCaseFirst{
+    width: 20%;
+    padding: 3vh;
+    display: flex;
+    border-right: 1px solid white;
+}
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+.rmCaseDate{
+    letter-spacing: 2px;
+    font-size: 15px;
+}
+
+.rmCaseSecond{
+    width: 80%;
+    padding: 3vh;
+}
+
+.rmcaseName{
+    letter-spacing: 2px;
+    font-size: 17px;
+    font-family: 'Roboto';
+}
+
+.rmCaseContent{
+    letter-spacing: 2px;
+    font-family: 'Roboto';
+    font-size: 17px;
+}
+
+.rmCaseClasse{
+    letter-spacing: 2px;
+    font-family: 'Roboto';
+    font-size: 17px;
+}
+
+.rmBtnModifier{
+    width: 15%;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    background-color: #62BDA3;
+}
+
+.rmBtnDelete{
+    width: 15%;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 0.5em;
+    color: black;
+    cursor: pointer;
+    background-color: #ff235e;
+}
+
+/*----------------------------Responive-----------------------------------------*/
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 500px){
+
+    /*----------------------------Students, Parents----------------------------------------*/
+    /*------------------1. header de la page------------------------*/
+    .rmFullContent{
+        margin-top: 1em;
+    }
+
     .rmSearchContent{
         flex-direction: column;
-        align-items: center;
-    }
-
-    .rmSearchContent{
-        width: 100%;
-    }
-
-    .boxSearchBar{
-      margin-bottom: 2em;
-    }
-
-    .rmTxtContent ,.rmSearchBarContent{
-        width: 90%;
     }
 
     .rmTxtContent{
-        border-right: 0px;
+        width: 100%;
+        border-bottom: 1px solid whitesmoke;
+        border-right: none;
     }
 
-    .rmResultContent{
-        width: 90%;
-        flex-direction: column;
+    .txtPInter{
+        font-size: 1.5rem;
     }
-    .rmB1,.rmB2{
+
+    .card{
+        width: 50%;
+        height: auto;
+    }
+
+    .textCard{
+        font-size: 15px;
+        letter-spacing: 1px;
+        word-wrap: break-word;
+        padding: 1vh;
+    }
+
+    .iconCard{
+        font-size: 25px;
+        padding: 1vh;
+    }
+
+    .rmHeader2{
         width: 100%;
     }
 
-    .rmB1{
-        border-right: 0px;
+    /*------------------2. Filtre de la page------------------------*/
+
+    .rmSearchTitle{
+        font-size: 20px;
     }
-    .rmB1-txt{
-        width: 55%;
+
+    .rmSearch{
+        width: 100%;
+        height: auto;
+    }
+
+    .rmSearchBtn{
+        width: 100%;
+        height: auto;
+        margin-bottom: 1vh;
+    }
+
+    /*------------------3. Corp de la page------------------------*/
+    .rmCase{
+        flex-direction: column;
+    }
+
+    .rmCaseFirst{
+        width: 100%;
+        padding: 2vh;
+        border-right: none;
+        border-bottom: 1px solid white;
+    }
+
+    .rmCaseSecond{
+        width: 100%;
+        padding: 2vh;
+    }
+
+    .rmcaseName{
+        font-size: 15px;
+        margin-bottom: 1em;
+    }
+
+    .rmCaseContent{
+        font-size: 15px;
+        margin-bottom: 1em;
+    }
+
+    .rmCaseClasse{
+        font-size: 15px;
+    }
+
+    /*----------------------------Secretary----------------------------------------*/
+    /*------------------1. header de la page------------------------*/
+    .rmSearchBarContent{
+        width: 100%;
+        background: #151E2F;
+        padding: 0;
+    }
+
+    /*------------------3. Corp de la page------------------------*/
+    .rmBtnModifier{
+        width: 35%;
+    }
+
+    .rmBtnDelete{
+        width: 35%;
+    }
+}
+@media only screen and (min-device-width : 501px) and (max-device-width : 1024px){
+    /*----------------------------Student, parents----------------------------------------*/
+    /*------------------1. header de la page------------------------*/
+    .rmFullContent{
+        margin-top: 1.5em;
+    }
+
+    .rmSearchContent{
+        flex-direction: column;
+    }
+
+    .rmTxtContent{
+        width: 100%;
+        border-bottom: 1px solid whitesmoke;
+        border-right: none;
     }
 
     .txtPInter{
         font-size: 2rem;
     }
 
+    .card{
+        width: 50%;
+        height: auto;
+    }
+
+    .textCard{
+        font-size: 25px;
+        letter-spacing: 2px;
+        padding: 1vh;
+    }
+
+    .iconCard{
+        font-size: 35px;
+        padding: 1vh;
+    }
+
+    .rmHeader2{
+        width: 100%;
+    }
+
+    /*------------------2. Filtre de la page------------------------*/
+    .rmSearchTitle{
+        font-size: 25px;
+    }
+
+    .rmSearch{
+        width: 50%;
+        margin-right: 35%;
+        height: auto;
+    }
+
+    .rmSearchBtn{
+        width: 50%;
+        height: auto;
+        margin-bottom: 1vh;
+    }
+
+    /*------------------3. Corp de la page------------------------*/
+    .rmCase{
+        flex-direction: column;
+    }
+
+    .rmCaseFirst{
+        width: 100%;
+        padding: 2vh;
+        border-right: none;
+        border-bottom: 1px solid white;
+    }
+
+    .rmCaseSecond{
+        width: 100%;
+        padding: 2vh;
+    }
+
+    .rmcaseName{
+        font-size: 15px;
+        margin-bottom: 1em;
+    }
+
+    .rmCaseContent{
+        font-size: 15px;
+        margin-bottom: 1em;
+    }
+
+    .rmCaseClasse{
+        font-size: 15px;
+    }
+
+    /*----------------------------Secretary----------------------------------------*/
+    /*------------------1. header de la page------------------------*/
+    .rmSearchBarContent{
+        width: 100%;
+        background: #151E2F;
+        padding: 0;
+    }
+
+    /*------------------3. Corp de la page------------------------*/
+    .rmBtnModifier{
+        width: 35%;
+    }
+
+    .rmBtnDelete{
+        width: 35%;
+    }
 }
 
+@media only screen and (min-device-width : 1025px) and (max-device-width : 1250px){
+    /*----------------------------Secretary----------------------------------------*/
+    /*------------------1. header de la page------------------------*/
+    .rmSearchBarContent{
+        width: 100%;
+        background: #151E2F;
+        padding: 2px;
+    }
+}

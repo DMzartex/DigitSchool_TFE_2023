@@ -22,7 +22,6 @@ if($uri == "/DigitSchool_TFE_2023/index.php?/templates/factures/facture"){
         $id = $_SESSION['userId'];
         $_SESSION['roleIdSearch'] = "studentId";
         $_SESSION['resultFacture'] = getFacture($conn,$id);
-        var_dump($_SESSION['resultFacture']);
     }else{
         $id = $_SESSION['userId'];
         $role2 = "studentId";
@@ -32,7 +31,9 @@ if($uri == "/DigitSchool_TFE_2023/index.php?/templates/factures/facture"){
     }
     require_once 'templates/factures/facture.php';
 }elseif ($uri == "/DigitSchool_TFE_2023/index.php?/templates/payement/payement" || !empty($_GET['factureId'])){
+    $_SESSION['dodo'] = $_GET['factureId'];
     require_once 'templates/payement/payement.php';
+
 }elseif ($uri == "/DigitSchool_TFE_2023/index.php?/templates/payement/successPayement"){
     require_once 'templates/payement/successPayement.php';
 }else{

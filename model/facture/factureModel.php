@@ -11,7 +11,7 @@
 
  function getFactureById($conn){
      $idFacture = preg_replace("/[^a-zA-Z0-9]/", "", $_SESSION['factureId']);
-     $query = $conn->prepare("SELECT communication,montant FROM facture where factureId = :id");
+     $query = $conn->prepare("SELECT factureId,communication,montant FROM facture where factureId = :id");
      $query->execute([
         'id' => (int)$idFacture
      ]);
