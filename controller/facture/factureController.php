@@ -30,11 +30,4 @@ if($uri == "/DigitSchool_TFE_2023/index.php?/templates/factures/facture"){
         $_SESSION['resultFacture'] = getFacture($conn,$id);
     }
     require_once 'templates/factures/facture.php';
-}elseif ($uri == "/DigitSchool_TFE_2023/index.php?/templates/payement/payement" || !empty($_GET['factureId'])){
-    $_SESSION['dodo'] = $_GET['factureId'];
-    require_once 'templates/payement/payement.php';
-
-}elseif ($uri == "/DigitSchool_TFE_2023/index.php?/templates/payement/successPayement"){
-    require_once 'templates/payement/successPayement.php';
-}else{
 }

@@ -37,7 +37,6 @@
                 <?php require_once 'components/searchBar.php'; ?>
                 <a class="btnFacture" href="index.php?/templates/factures/newFacture">Créé une facture</a>
             </div>
-
         <?php endif; ?>
     </div>
 
@@ -47,7 +46,7 @@
             <p>En attente de payement</p>
         </div>
         <!-- Afficher les factures si elle ne sont pas payé -->
-        <?php if(!empty($_SESSION['resultFacture'])): ?>
+        <?php if(isset($_SESSION['resultFacture'])): ?>
             <?php foreach ($_SESSION['resultFacture'] as $resultFacture): ?>
                 <?php if($resultFacture['paye'] === 0): ?>
                     <div class="blocFacture">
@@ -75,7 +74,7 @@
             <p>Historique de payement</p>
         </div>
         <!-- Afficher les factures si elle sont payé -->
-        <?php if(!empty($_SESSION['resultFacture'])): ?>
+        <?php if(isset($_SESSION['resultFacture'])): ?>
             <?php foreach ($_SESSION['resultFacture'] as $resultFacture): ?>
                 <?php if($resultFacture['paye'] === 1): ?>
                     <div class="blocFacture">

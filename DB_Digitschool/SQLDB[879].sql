@@ -186,6 +186,39 @@ create table retard(
                        foreign key (studentId) references student(studentId)
 );
 
+create table paymentCreated(
+                               paymentCreatedId int primary key auto_increment not null,
+                               secretPayment varchar(500) not null,
+                               parentId int,
+                               studentId int,
+                               factureId int,
+                               foreign key (parentId) references parent(parentId),
+                               foreign key(studentId) references student(studentId),
+                               foreign key (factureId) references facture(factureId)
+);
+
+create table paymentSuccess(
+                               paymentSuccessId int primary key auto_increment not null,
+                               secretPayment varchar(500) not null,
+                               parentId int,
+                               studentId int,
+                               factureId int,
+                               foreign key (parentId) references parent(parentId),
+                               foreign key(studentId) references student(studentId),
+                               foreign key (factureId) references facture(factureId)
+);
+
+create table paymentRefused(
+                               paymentRefusedId int primary key auto_increment not null,
+                               secretPayment varchar(500) not null,
+                               parentId int,
+                               studentId int,
+                               factureId int,
+                               foreign key (parentId) references parent(parentId),
+                               foreign key(studentId) references student(studentId),
+                               foreign key (factureId) references facture(factureId)
+);
+
 
 
 
