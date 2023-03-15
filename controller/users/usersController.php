@@ -11,9 +11,6 @@ if($uri == "/DigitSchool_TFE_2023/index.php?/templates/login/login.php" && empty
     if(!empty($_SESSION['role'])){
         if($uri == "/DigitSchool_TFE_2023/index.php?/templates/users/workSpace.php")
         require_once "templates/users/workSpace.php";
-        if($uri == "/DigitSchool_TFE_2023/index.php?/templates/factures/facture"){
-            require_once "templates/factures/facture.php";
-        }
     }
     if(!empty($_GET['disconnect'])){
         disconnect();

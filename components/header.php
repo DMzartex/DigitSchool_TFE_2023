@@ -39,7 +39,7 @@
                 <?php endif; ?>
                 <?php if($_SESSION['role'] == "student" || "parent" || "educator" || "teacher"): ?>
                     <li>
-                        <a href="index.php?/templates/remarque/remarque">Remarques</a>
+                        <a href="index.php?/templates/remark/remark">Remarques</a>
                     </li>
                 <?php endif; ?>
                 <li>

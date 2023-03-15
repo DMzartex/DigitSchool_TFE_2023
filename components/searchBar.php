@@ -6,9 +6,6 @@
         <select class="selectSearch form-select form-select-md" name="role" aria-label="Default select example">
             <option selected value="none">Choisissez un rôle :</option>
             <option value="student">Etudiant</option>
-            <?php if($selectSearchBar):?>
-                <option value="parent">Parent</option>
-            <?php endif; ?>
         </select>
     </div>
 

@@ -145,9 +145,14 @@ create table remark(
                        teacherId int,
                        studentId int,
                        educatorId int,
+                       coursId int,
                        foreign key (teacherId) references teacher(teacherId),
                        foreign key (studentId) references student(studentId),
-                       foreign key (educatorId) references educator(educatorId)
+                       foreign key (educatorId) references educator(educatorId),
+                       foreign key (coursId) references cours(coursId),
+                       coursName varchar(30) not null,
+                       teacherName varchar(30),
+                       educatorName varchar(30)
 );
 
 create table infoImp(
@@ -207,18 +212,6 @@ create table paymentSuccess(
                                foreign key(studentId) references student(studentId),
                                foreign key (factureId) references facture(factureId)
 );
-
-create table paymentRefused(
-                               paymentRefusedId int primary key auto_increment not null,
-                               secretPayment varchar(500) not null,
-                               parentId int,
-                               studentId int,
-                               factureId int,
-                               foreign key (parentId) references parent(parentId),
-                               foreign key(studentId) references student(studentId),
-                               foreign key (factureId) references facture(factureId)
-);
-
 
 
 

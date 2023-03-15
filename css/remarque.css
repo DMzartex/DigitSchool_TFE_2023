@@ -120,7 +120,7 @@ body{
     margin-right: 1vh;
     margin-bottom: 1vh;
     width: 20%;
-    height: 5vh;
+    height: 3.6vh;
     display: flex;
 }
 
@@ -129,11 +129,14 @@ body{
     text-transform: uppercase;
     display: flex;
     width: 20%;
-    height: 5vh;
+    height: 3.6vh;
     background-color: #62BDA3;
     color: black;
     border: 1px Solid black;
     border-radius: 5px;
+}
+.formSelectCours{
+    width: 90%;
 }
 
 /*----------------------------3. Corp de page-----------------------------------------*/

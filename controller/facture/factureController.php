@@ -9,16 +9,18 @@ if($uri == "/DigitSchool_TFE_2023/index.php?/templates/factures/facture"){
             $_SESSION['roleIdSearch']  = $_POST['role'].'Id';
             if(!empty($_POST['inputSearch'])){
                 $matricule = $_POST['inputSearch'];
+                // Vérifier si le contenu de l'input de la bar de recherche ne contient que des chiffres
                 if (ctype_digit($matricule)) {
                     $id = $matricule;
+                    // Select des factures en fonction du matricule entré dans la bar de recherche
                     $_SESSION['resultFacture'] = getFacture($conn,$id);
-                    var_dump($_SESSION['resultFacture']);
+
                 } else {
                     echo "L'input ne ne contient pas uniquement des chiffres";
                 }
             }
         }
-    }elseif ($_SESSION['role'] == "student"){
+    }else if ($_SESSION['role'] == "student"){
         $id = $_SESSION['userId'];
         $_SESSION['roleIdSearch'] = "studentId";
         $_SESSION['resultFacture'] = getFacture($conn,$id);
@@ -29,5 +31,10 @@ if($uri == "/DigitSchool_TFE_2023/index.php?/templates/factures/facture"){
         $idResult = getSecondId($conn,$role2,$id);
         $_SESSION['resultFacture'] = getFacture($conn,$id);
     }
+
+    var_dump($_SESSION['resultFacture']);
+
     require_once 'templates/factures/facture.php';
+
 }
+

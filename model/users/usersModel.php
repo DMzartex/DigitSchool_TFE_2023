@@ -19,7 +19,7 @@ function getSecondId($conn,$role2,$id){
     $query->execute([
         'id' => $firstId
     ]);
-    $idResult = $query->fetchColumn();
+    $idResult = $query->fetchAll();
     return $idResult;
 }
 

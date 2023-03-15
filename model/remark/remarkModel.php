@@ -1,17 +1,27 @@
 <?php
-function getRemark($conn,$id){
+/*function getRemark($conn,$idStudent){
     $roleIdSearch = preg_replace("/[^a-zA-Z0-9]/", "", $_SESSION['roleIdSearch']);
-    $query = $conn->prepare("SELECT remarkId,title,content,date,teacherId,studentId,educatorId FROM remark where $roleIdSearch = :id");
+    $query = $conn->prepare("SELECT * FROM remark where $roleIdSearch = :idStudent");
     $query->execute([
-        'id'=>(int)$id
+        'idStudent'=>(int)$idStudent
+    ]);
+    $result = $query->fetchAll();
+    return $result;
+}*/
+
+function getRemarkByCoursId($conn,$idCours,$idStudent){
+    $query = $conn->prepare("SELECT * from remark where studentId = :idStudent AND coursId = :idCours");
+    $query->execute([
+       'idStudent'=>(int)$idStudent,
+        'idCours' =>(int)$idCours
     ]);
     $result = $query->fetchAll();
     return $result;
 }
-function getIdStudent_Parent($conn,$id){
-    $query = $conn->prepare("SELECT studentId FROM student_parent WHERE parentId = :id");
+function getIdStudent_Parent($conn,$idParent){
+    $query = $conn->prepare("SELECT studentId FROM student_parent WHERE parentId = :idParent");
     $query->execute([
-       'id'=>(int)$id
+       'idParent'=>(int)$idParent
     ]);
     $result = $query->fetchAll();
     return $result;
@@ -21,20 +31,21 @@ function getNameStudent($conn){
     $idStudent_parent = $_SESSION['idStudent_parent'];
     $index = 0;
     foreach ($idStudent_parent as $idStudent){
-        var_dump($idStudent['studentId']);
         // Boucle for si la boucle foreach ne suffit pas.
-        $query = $conn->prepare("SELECT name FROM student where studentId = :id");
+        $query = $conn->prepare("SELECT firstName,studentId FROM student where studentId = :id");
         $query->execute([
             'id' => $idStudent['studentId']
         ]);
         $resultName = $query->fetchAll();
-        var_dump($resultName);
 
         foreach ($resultName as $name){
-            $nameStudent[$index] = $name['name'];
+            $nameStudent[$index] = $name['firstName'];
             $index += 1;
         }
     }
     return $nameStudent;
 }
 
+function getRemarkFilter($conn,$idStudent,$idCours){
+
+}
