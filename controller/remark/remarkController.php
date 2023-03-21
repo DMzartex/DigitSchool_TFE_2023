@@ -4,6 +4,8 @@ $uri = $_SERVER['REQUEST_URI'];
 if($uri == "/DigitSchool_TFE_2023/index.php?/templates/remark/remark"){
     // l'utilisateur connecté est un étudiant
     if($_SESSION['role'] == "student"){
+        // Récupèration de la liste des cours
+        $_SESSION['listCours'] = getCoursByStudentId($conn,$_SESSION['userId']);
         // Vérification pour savoir si l'étudiant à bien séléctionné un filtre pour afficher les remarques.
         if(isset($_POST['selectCours'])){
             // assignation du contenu du filtre de la variable post dans la variable cours
@@ -12,8 +14,6 @@ if($uri == "/DigitSchool_TFE_2023/index.php?/templates/remark/remark"){
             if($cours != "none"){
                 // Récupération des remarques
                 $_SESSION['resultRemark']  = getRemarkByCoursId($conn,$cours,$_SESSION['userId']);
-                var_dump($_SESSION['resultRemark']);
-                var_dump($cours);
             }
         }
         // l'utilisateur connecté est un parent.
@@ -23,16 +23,18 @@ if($uri == "/DigitSchool_TFE_2023/index.php?/templates/remark/remark"){
         // Récupération des noms des étudiants par rapport aux id trouvé par la fonction getIdStudebt_Parent()
         $_SESSION['nameStudent'] = getNameStudent($conn);
         // Vérifier si les filtres pour le select des remarques sont remplies.
-        if(isset($_POST['selectCours']) && isset($_POST['selectStudent'])){
-            // remplissage de la session resultRemark avec les informations des remarques trouvé par rapport aux filtres séléctionné par le parent.
-            $_SESSION['resultRemark'] = getRemarkFilter($conn,);
+        if(isset($_POST['selectStudent'])){
+            $_SESSION['listCours'] = getCoursByStudentId($conn,$_POST['selectStudent']);
+            $_SESSION['studentSelect'] = $_POST['selectStudent'];
         }
-        var_dump($_SESSION['idStudent_parent']);
+        if(isset($_POST['selectCours'])){
+            // remplissage de la session resultRemark avec les informations des remarques trouvé par rapport aux filtres séléctionné par le parent.
+            $_SESSION['resultRemark'] = getRemarkFilter($conn,$_SESSION['studentSelect'],$_POST['selectCours']);
+        }
     // Si aucun des rôle dans les conditions du dessus ne correspond alors j'affiche le template d'erreur.
     }else{
         require_once 'index.php';
     }
-
     // Require pour afficher le contenu de la page remark
     require_once 'templates/remark/remark.php';
 }

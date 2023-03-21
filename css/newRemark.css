@@ -1,0 +1,41 @@
+.rmForm{
+    padding: 3vh;
+}
+
+.input{
+    width: 30%;
+}
+
+.newRmSearchBarContent{
+    padding: 3vh;
+    width: 70%;
+}
+.btnSearch{
+    position: absolute;
+    right: 125px;
+    top: 5px;
+    color: #93CBA3;
+}
+
+.rmSearchContent{
+    margin-bottom: 2vh;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+
+    .newRmSearchBarContent{
+        width: 100%;
+    }
+    .btnSearch{
+        position: absolute;
+        right: 60px;
+    }
+
+    .input{
+        width: 100%;
+    }
+
+    .rmResultContent{
+        width: 100%;
+    }
+}

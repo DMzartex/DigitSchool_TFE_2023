@@ -15,7 +15,7 @@ body{
 .rmSearchContent{
     display: flex;
     flex-direction: row;
-    width: 80%;
+    width: 79%;
     height: auto;
 }
 
@@ -97,6 +97,7 @@ body{
 .rmSearchClass{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     width: 80%;
     height: auto;
     font-family: 'Roboto';
@@ -125,19 +126,29 @@ body{
 }
 
 .rmSearchBtn{
+    display: flex;
     justify-content: center;
+    align-items: center;
     text-transform: uppercase;
     display: flex;
     width: 20%;
-    height: 3.6vh;
+    height: 3vh;
     background-color: #62BDA3;
     color: black;
     border: 1px Solid black;
     border-radius: 5px;
 }
-.formSelectCours{
+.formSelectStudent, .formSelectCours{
     width: 90%;
 }
+
+.formSelectCours{
+    margin-top: 1vh;
+}
+
+
+
+
 
 /*----------------------------3. Corp de page-----------------------------------------*/
 
@@ -217,12 +228,16 @@ body{
 
     /*----------------------------Students, Parents----------------------------------------*/
     /*------------------1. header de la page------------------------*/
+    .rmResultContent{
+        width: 95%;
+    }
     .rmFullContent{
         margin-top: 1em;
     }
 
     .rmSearchContent{
         flex-direction: column;
+        width: 95%;
     }
 
     .rmTxtContent{

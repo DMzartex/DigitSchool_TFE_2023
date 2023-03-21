@@ -1,13 +1,4 @@
 <?php
-/*function getRemark($conn,$idStudent){
-    $roleIdSearch = preg_replace("/[^a-zA-Z0-9]/", "", $_SESSION['roleIdSearch']);
-    $query = $conn->prepare("SELECT * FROM remark where $roleIdSearch = :idStudent");
-    $query->execute([
-        'idStudent'=>(int)$idStudent
-    ]);
-    $result = $query->fetchAll();
-    return $result;
-}*/
 
 function getRemarkByCoursId($conn,$idCours,$idStudent){
     $query = $conn->prepare("SELECT * from remark where studentId = :idStudent AND coursId = :idCours");
@@ -47,5 +38,22 @@ function getNameStudent($conn){
 }
 
 function getRemarkFilter($conn,$idStudent,$idCours){
+    $query = $conn->prepare("SELECT * FROM remark WHERE studentId = :idStudent AND coursId = :coursId");
+    $query->execute([
+        'idStudent' => $idStudent,
+        'coursId' => $idCours
+    ]);
+    $result = $query->fetchAll();
+    return $result;
+}
 
+function getCoursByStudentId($conn, $studentId){
+    $query = $conn->prepare("SELECT student_cours.coursId, cours.name FROM student_cours 
+                             JOIN cours ON student_cours.coursId = cours.coursId 
+                             WHERE student_cours.studentId = :studentId");
+    $query->execute([
+        'studentId' => $studentId
+    ]);
+    $result = $query->fetchAll();
+    return $result;
 }

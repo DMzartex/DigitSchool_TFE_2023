@@ -24,16 +24,11 @@ if($uri == "/DigitSchool_TFE_2023/index.php?/templates/factures/facture"){
         $id = $_SESSION['userId'];
         $_SESSION['roleIdSearch'] = "studentId";
         $_SESSION['resultFacture'] = getFacture($conn,$id);
-    }else{
+    }else if ($_SESSION['role'] == "parent"){
         $id = $_SESSION['userId'];
-        $role2 = "studentId";
         $_SESSION['roleIdSearch'] = "parentId";
-        $idResult = getSecondId($conn,$role2,$id);
         $_SESSION['resultFacture'] = getFacture($conn,$id);
     }
-
-    var_dump($_SESSION['resultFacture']);
-
     require_once 'templates/factures/facture.php';
 
 }

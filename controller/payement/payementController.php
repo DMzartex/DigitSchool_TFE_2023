@@ -13,16 +13,14 @@ if($uri == "/DigitSchool_TFE_2023/index.php?/templates/payement/payement" || !em
         $_SESSION['montant'] = $infoFacture['montant'];
     }
     if($_SESSION['role'] == "student"){
-        $id1 = $_SESSION['userId'];
-        $role2 = "parentId";
-        $id2 = getSecondId($conn,$role2,$id1);
+        $studentId = $_SESSION['userId'];
+        $parentId = null;
         // Création d'une session de payement stripe
-        createCheckoutSession($conn,$id1,$id2);
+        createCheckoutSession($conn,$studentId,$parentId);
     }else if($_SESSION['role'] == "parent"){
-        $id1 = $_SESSION['userId'];
-        $role2 = "studentId";
-        $id2 = getSecondId($conn,$role2,$id1);
-        createCheckoutSession($conn,$id2,$id1);
+        $parentId = $_SESSION['userId'];
+        $studentId = null;
+        createCheckoutSession($conn,$studentId,$parentId);
     }
 }elseif ($uri == "/DigitSchool_TFE_2023/index.php?/templates/payement/successPayement"){
     if(isset($_SESSION['sessionId'])){

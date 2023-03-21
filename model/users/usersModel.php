@@ -1,4 +1,14 @@
 <?php
+
+function getStudentById($conn,$id){
+    $query= $conn->prepare("SELECT * from student where studentId = :studentId");
+    $query->execute([
+        'studentId' => $id
+    ]);
+    $result = $query->fetchAll();
+    return $result;
+}
+
 function getUser($conn,$arr){
     $roleIdSearch = preg_replace("/[^a-zA-Z0-9]/", "", $_SESSION['roleIdSearch']);
     $role =  preg_replace("/[^a-zA-Z0-9]/", "", $_SESSION['roleSearchBar']);
@@ -19,7 +29,7 @@ function getSecondId($conn,$role2,$id){
     $query->execute([
         'id' => $firstId
     ]);
-    $idResult = $query->fetchAll();
+    $idResult = $query->fetchColumn();
     return $idResult;
 }
 

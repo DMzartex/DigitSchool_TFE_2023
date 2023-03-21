@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css/remarque.css">
+<link rel="stylesheet" href="css/remark.css">
 <div class="rmFullContent">
     <div class="rmSearchContent">
         <div class="rmTxtContent">
@@ -10,7 +10,7 @@
                 <div class="rmSearchBarContent">
                     <?php require_once 'components/searchBar.php'?>
                 </div>
-                <a class="btnNewremarque" href="index.php?/templates/factures/newRemarque">Ajouter une nouvelle remarque</a>
+                <a class="btnNewremarque" href="/DigitSchool_TFE_2023/index.php?/templates/remark/newRemark">Ajouter une nouvelle remarque</a>
             <?php endif; ?>
 
             <!-- si parents ou éleves alors afficher cette partie -->
@@ -39,27 +39,21 @@
     </div>
 
     <!-- si parents ou éleves alors afficher cette partie -->
-    <?php if($_SESSION['role'] == "parent" || $_SESSION['role'] == "student"): ?>
+    <?php if($_SESSION['role'] == "parent"): ?>
         <div class="rmSearchClass">
             <h1 class="rmSearchTitle">Filtre tes recherches :</h1>
-            <form method="post" class="formSelectCours">
-                <select class="rmSearch form-select form-select-md" name="selectCours">
-                    <option selected value="none">Choisissez un cours :</option>
-                    <option value="2">Math</option>
-                    <option value="1">Français</option>
-                    <option value="3">Sciences</option>
-                </select>
-                <?php if($_SESSION['role'] == "parent"): ?>
-                    <select class="rmSearch form-select form-select-md" name="selectStudent">
-                        <option selected value="none">Nom de votre enfant :</option>
-                        <?php for($i = 0; $i < count($_SESSION['nameStudent']); $i++): ?>
-                            <option value="<?=$_SESSION['idStudent_parent'][$i]['studentId']?>"><?= $_SESSION['nameStudent'][$i] ?></option>
-                        <?php endfor; ?>
-                    </select>
-                <?php endif; ?>
-                <button class="rmSearchBtn" type="submit" value="appliquer">Appliquer</button>
-            </form>
+            <?php require_once 'forms/SelectStudentForms.php'?>
+            <?php if(isset($_POST['selectStudent']) && isset($_SESSION['listCours']) && $_POST['selectStudent'] != "none"): ?>
+               <?php require_once 'forms/selectCoursForms.php'?>
+            <?php endif; ?>
         </div>
+    <?php endif; ?>
+
+    <?php if($_SESSION['role'] == "student"): ?>
+    <div class="rmSearchClass">
+        <h1 class="rmSearchTitle">Filtre tes recherches :</h1>
+        <?php require_once 'forms/selectCoursForms.php'?>
+    </div>
     <?php endif; ?>
 
     <div class="rmResultContent">
