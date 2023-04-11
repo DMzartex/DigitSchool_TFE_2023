@@ -2,6 +2,7 @@
 $uri = $_SERVER['REQUEST_URI'];
 
 if($uri == "/DigitSchool_TFE_2023/index.php?/templates/remark/remark"){
+    $stPage = "remark";
     // l'utilisateur connecté est un étudiant
     if($_SESSION['role'] == "student"){
         // Récupèration de la liste des cours

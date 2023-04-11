@@ -15,10 +15,13 @@
             <?php endif; ?>
         </div>
     </div>
-
     <?php require_once 'components/resultSearchUser.php'?>
-
     <div class="rmResultContent">
+        <?php if(isset($_SESSION['listCoursNewRemark'])):?>
+            <div>
+                <?php require_once 'forms/selectCoursForms.php'?>
+            </div>
+        <?php endif;?>
         <div class="rmForm">
             <?php require_once 'forms/remarkForms.php'; ?>
         </div>

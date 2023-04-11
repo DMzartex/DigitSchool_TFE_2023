@@ -1,19 +1,33 @@
 <form action="" method="post">
     <div class="display-flex-column">
-        <label for="nameDesti" class="labelFormFact">Intitulée de la remarque :</label>
+        <label for="idStudentRem" class="labelFormFact">Id de l'étudiant :</label>
+        <input class="input" type="text" name="idStudentRem" id="idStudentRem"
+               <?php if(isset($_GET['idUserRem'])): ?>
+                    value="<?=$_GET['idUserRem']?>">
+               <?php endif; ?>
+    </div>
+    <div class="display-flex-column">
+        <label for="intiRem" class="labelFormFact">Intitulée de la remarque :</label>
         <input class="input" type="text" name="intiRem" id="intiRem">
     </div>
     <div class="display-flex-column">
-        <label for="firstNameDesti" class="labelFormFact">Contenu de la remarque :</label>
-        <input class="input" type="text" name="contenuRem" id="contenuRem">
+        <label for="contentRem" class="labelFormFact">Contenu de la remarque :</label>
+        <input class="input" type="text" name="contentRem" id="contentRem">
     </div>
     <div class="display-flex-column">
-        <label for="adresse" class="labelFormFact">Date de la remarque :</label>
-        <input class="input" type="text" name="dateRem" id="dateRem">
+        <label for="dateRem" class="labelFormFact">Date de la remarque :</label>
+        <input class="input" type="date" name="dateRem" id="dateRem">
     </div>
-    <?php if(empty($_POST['nameDesti'])): ?>
+    <?php if ($_SESSION['role'] == "teacher"): ?>
+        <div class="display-flex-column">
+            <label for="coursRem" class="labelFormFact">cours :</label>
+            <input class="input" type="text" name="coursRem" id="coursRem"
+            <?php if(isset($_SESSION['nameCoursSelect'])): ?>
+            value="<?= $_SESSION['nameCoursSelect']?>"
+            <?php endif; ?>>
+        </div>
+    <?php endif; ?>
         <div class="btnSend">
             <button type="submit" name="sendFacture" id="btnSend">Envoyer</button>
         </div>
-    <?php endif; ?>
 </form>

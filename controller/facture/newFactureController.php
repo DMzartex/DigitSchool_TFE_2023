@@ -2,6 +2,7 @@
 $uri = $_SERVER['REQUEST_URI'];
 
 if($uri == "/DigitSchool_TFE_2023/index.php?/templates/factures/newFacture" || !empty($_GET['id'])){
+    $stPage = "newFacture";
     // Verifier si un filtre pour les rôle est bien choisi
     if(!empty($_POST['role'])){
         $_SESSION['roleSearchBar'] = $_POST['role'];

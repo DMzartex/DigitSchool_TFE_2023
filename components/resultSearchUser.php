@@ -19,7 +19,16 @@
             <?php foreach ($_SESSION['resultSearch'] as $result): ?>
                 <div class="boxResultInfos">
                     <div class="colResult">
-                        <a class="txtResult" <?php if(empty($_GET['id'])):?> href="<?=$uri?>&id=<?=$result['studentId']?>"<?php endif;?>><?=$result['studentId']?></a>
+                        <?php if($stPage == "newFacture"): ?>
+                            <a class="txtResult" <?php if(empty($_GET['id'])):?>
+                                href="<?=$uri?>&id=<?=$result['studentId']?>"
+                            <?php endif;?>><?=$result['studentId']?></a>
+                        <?php endif;?>
+                        <?php if($stPage == "newRemark"):?>
+                            <a class="txtResult" <?php if(empty($_GET['idUserRem'])):?>
+                                href="<?=$uri?>&idUserRem=<?=$result['studentId']?>"
+                            <?php endif;?>><?=$result['studentId']?></a>
+                        <?php endif;?>
                     </div>
                     <div class="colResult">
                         <h1 class="txtResult"><?=$result['name'] ?></h1>
