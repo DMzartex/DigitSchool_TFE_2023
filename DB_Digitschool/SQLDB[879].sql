@@ -132,6 +132,7 @@ create table educator(
                          password varchar(100) not null,
                          adress varchar(50) not null,
                          postalCode varchar(20) not null,
+                         ville varchar(30) not null,
                          phoneNumber varchar(20) not null,
                          birthDate datetime not null,
                          function varchar(32) not null

@@ -1,0 +1,27 @@
+.blocInput{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.labelFormSignup{
+    margin-left: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    color: white;
+}
+.inputSignup{
+    width: 80%;
+    height: 3vh;
+    margin-left: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background: #151E2F;
+    border: 1px solid white;
+    color: white;
+}
+
+/* media ecran PC */
+@media screen and (min-width: 768px) {
+
+}

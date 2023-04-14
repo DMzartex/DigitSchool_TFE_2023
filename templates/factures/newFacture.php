@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css/newFacture.css">
+<link rel="stylesheet" href="css/facture/newFacture.css">
 
 
 <div class="container-fluid containerTop">

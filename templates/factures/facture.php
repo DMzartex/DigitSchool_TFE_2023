@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css/facture.css">
+<link rel="stylesheet" href="css/facture/facture.css">
 <div class="containerFull">
     <div class="BlockHeaderFacture">
         <div class="containerTitle">

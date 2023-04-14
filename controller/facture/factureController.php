@@ -1,7 +1,7 @@
 <?php
 $uri = $_SERVER['REQUEST_URI'];
 
-if($uri == "/DigitSchool_TFE_2023/index.php?/templates/factures/facture"){
+if($uri == "/DigitSchool_TFE_2023/index.php?/templates/factures/facture" && $_SESSION['role'] != "teacher" && $_SESSION['role'] != "educator"){
     $selectSearchBar = true;
     if($_SESSION['role'] == "secretary"){
         if(!empty($_POST['role'])){

@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="css/remark.css">
-<link rel="stylesheet" href="css/newRemark.css">
+<link rel="stylesheet" href="css/remark/remark.css">
+<link rel="stylesheet" href="css/remark/newRemark.css">
 
 <div class="rmFullContent">
     <div class="rmSearchContent">

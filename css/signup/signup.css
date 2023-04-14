@@ -1,0 +1,66 @@
+body{
+    background: #050528;
+}
+
+.mainBox{
+    width: 95%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.formBox{
+    background: #AEB0F6;
+    width: 100%;
+    height: 50%;
+}
+
+.txtBox{
+    width: 100%;
+    height: 50%;
+}
+
+.containerTxt{
+    background: #151E2F;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 100%;
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+}
+
+.txt-p1{
+    color: white;
+    font-size: 2.5em;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: 'Inter', sans-serif;
+}
+.formBox{
+    width: 90%;
+    height: 100%;
+    background: #151E2F;
+    margin: 40px auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.titreFormSignup{
+    margin-left: 20px;
+    margin-top: 20px;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    font-size: 2em;
+    border-bottom: 1px solid white;
+    width: 50%;
+}
+
+/* media ecran PC */
+@media screen and (min-width: 768px) {
+    .mainBox{
+        flex-direction: row;
+    }
+    .containerTxt{
+        margin-top: 40px;
+    }
+}

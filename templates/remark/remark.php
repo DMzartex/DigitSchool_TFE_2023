@@ -49,7 +49,7 @@
         </div>
     <?php endif; ?>
 
-    <?php if($_SESSION['role'] == "student"): ?>
+    <?php if($_SESSION['role'] == "student" || $_SESSION['role'] == "teacher"): ?>
     <div class="rmSearchClass">
         <h1 class="rmSearchTitle">Filtre tes recherches :</h1>
         <?php require_once 'forms/selectCoursForms.php'?>

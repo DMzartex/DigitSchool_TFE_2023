@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css/factureForms.css">
+<link rel="stylesheet" href="css/facture/factureForms.css">
 <form action="" method="post">
     <div class="display-flex-column">
         <label for="nameDesti" class="labelFormFact">Nom du destinataire :</label>

@@ -12,6 +12,7 @@ function connectUser($conn){
                 $user = $stmtEmail->fetch();
                 if($user){
                     $_SESSION['userId'] = $user[$roleId];
+                    $_SESSION['userName'] = $user['name'];
                     $password = htmlspecialchars($_POST['passLogin']);
                     $stmtPassword = $conn->prepare("SELECT password FROM $_POST[role] WHERE email='$email'");
                     $stmtPassword->execute();

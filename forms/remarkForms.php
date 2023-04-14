@@ -22,8 +22,8 @@
         <div class="display-flex-column">
             <label for="coursRem" class="labelFormFact">cours :</label>
             <input class="input" type="text" name="coursRem" id="coursRem"
-            <?php if(isset($_SESSION['nameCoursSelect'])): ?>
-            value="<?= $_SESSION['nameCoursSelect']?>"
+            <?php if(isset($nameCoursSelect)): ?>
+            value="<?= $nameCoursSelect?>"
             <?php endif; ?>>
         </div>
     <?php endif; ?>

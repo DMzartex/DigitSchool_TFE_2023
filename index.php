@@ -28,7 +28,7 @@ require_once('vendor/autoload.php'); // Charge la bibliothèque Stripe PHP
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/structure.css">
-    <link rel="stylesheet" href="css/factureForms.css">
+    <link rel="stylesheet" href="css/facture/factureForms.css">
       <script src="https://kit.fontawesome.com/cdc07db3e6.js" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="css/searchBar.css">
   </head>
@@ -41,6 +41,7 @@ require_once('vendor/autoload.php'); // Charge la bibliothèque Stripe PHP
     <?php require_once 'controller/remark/remarkController.php' ?>
     <?php require_once 'controller/payement/payementController.php'?>
     <?php require_once 'controller/remark/newRemarkController.php'?>
+    <?php require_once 'controller/signup/signupController.php'?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -17,9 +17,9 @@ if($uri == "/DigitSchool_TFE_2023/index.php?/templates/remark/newRemark" || !emp
         // Récupération des cours communs entre l'élève et le prof
         $_SESSION['listCoursNewRemark'] = getCoursForTeacher($conn,(int)$_GET['idUserRem'],$_SESSION['userId']);
         if(isset($_POST['selectCours'])){
-            $courSelect = preg_replace("/[^a-zA-Z0-9]/","",$_POST['selectCours']);
+            $_SESSION['coursIdSelect'] = preg_replace("/[^a-zA-Z0-9]/","",$_POST['selectCours']);
             // Récupération du nom du cour séléctionné
-            $_SESSION['nameCoursSelect'] = getNameCours($courSelect);
+            $nameCoursSelect = getNameCours($_SESSION['coursIdSelect']);
         }
         if(isset($_POST['idStudentRem']) && isset($_POST['intiRem'])
             && isset($_POST['contentRem']) && isset($_POST['coursRem']))
@@ -27,14 +27,28 @@ if($uri == "/DigitSchool_TFE_2023/index.php?/templates/remark/newRemark" || !emp
             $idStudent = htmlspecialchars($_POST['idStudentRem']);
             $intiRem = htmlspecialchars($_POST['intiRem']);
             $contentRem = htmlspecialchars($_POST['contentRem']);
-            $coursRem = htmlspecialchars($_POST['coursRem']);
+            $nameCoursSelect = htmlspecialchars($_POST['coursRem']);
+            if($_SESSION['role'] == "teacher"){
+                $teacherId = $_SESSION['userId'];
+                $educatorId = null;
+                $educatorName = null;
+                $teacherName = $_SESSION['userName'];
+            }else{
+                $teacherId = null;
+                $educatorId = $_SESSION['userId'];
+                $teacherName = null;
+                $educatorName = $_SESSION['userName'];
+            }
+
             if(isset($_POST['dateRem'])){
                 $date = $_POST['dateRem'];
                 $format = 'Y-m-d';
                 $date_obj = DateTime::createFromFormat($format,$date);
                 if($date_obj->format($format) == $date){
                     $dateFormate = $date_obj->format($format);
-                    createRemark($conn,$idStudent,$intiRem,$contentRem,$coursRem,$dateFormate);
+                    createRemark($conn,$idStudent,$intiRem,$contentRem,$dateFormate,$_SESSION['coursIdSelect'],$nameCoursSelect,$teacherId,$educatorId,$teacherName,$educatorName);
+                }else{
+                    echo "La date entrée n'est pas au bon format.";
                 }
             }
         }else{
