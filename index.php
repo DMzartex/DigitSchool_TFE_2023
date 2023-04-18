@@ -13,6 +13,7 @@ require_once 'model/facture/factureModel.php';
 require_once 'model/remark/remarkModel.php';
 require_once 'model/payement/payementModel.php';
 require_once 'model/remark/newRemarkModel.php';
+require_once 'model/signup/signupModel.php';
 
 require_once('vendor/autoload.php'); // Charge la bibliothèque Stripe PHP
 ?>

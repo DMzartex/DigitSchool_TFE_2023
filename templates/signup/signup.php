@@ -7,8 +7,13 @@
             </div>
         </div>
         <div class="formBox">
+            <?php if(!empty($error_msg)): ?>
+                <div class="alert alert-danger" role="alert">
+                    <?= $error_msg ?>
+                </div>
+            <?php endif; ?>
             <h1 class="titreFormSignup">Inscription</h1>
-            <?php require_once 'forms/signup/signupForm.php'?>
+                <?php require_once 'forms/signup/signupForm.php'?>
         </div>
     </div>
 </div>

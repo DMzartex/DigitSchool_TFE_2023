@@ -1,19 +1,18 @@
-<link rel="stylesheet" href="css/remark.css">
+<link rel="stylesheet" href="css/remark/remark.css">
 <div class="rmFullContent">
     <div class="rmSearchContent">
         <div class="rmTxtContent">
             <h1 class="rmTxt-1 txtPInter"><span class="textGreen">Rechercher un élève</span> pour obtenir la liste des remarques.</span></h1>
         </div>
-        <!-- si secrétaire alors afficher cette partie -->
+
         <div class="rmHeader2">
-            <?php if($_SESSION['role'] == "teacher"): ?>
+            <?php if($_SESSION['role'] == "teacher" || $_SESSION['role'] == "educator"): ?>
                 <div class="rmSearchBarContent">
                     <?php require_once 'components/searchBar.php'?>
                 </div>
                 <a class="btnNewremarque" href="/DigitSchool_TFE_2023/index.php?/templates/remark/newRemark">Ajouter une nouvelle remarque</a>
             <?php endif; ?>
 
-            <!-- si parents ou éleves alors afficher cette partie -->
             <?php if($_SESSION['role'] == "parent" || $_SESSION['role'] == "student"): ?>
                 <div class="boxT-3">
                     <div class="card">
@@ -49,7 +48,7 @@
         </div>
     <?php endif; ?>
 
-    <?php if($_SESSION['role'] == "student" || $_SESSION['role'] == "teacher"): ?>
+    <?php if($_SESSION['role'] == "student" || $_SESSION['role'] == "teacher" || $_SESSION['role'] == "educator"): ?>
     <div class="rmSearchClass">
         <h1 class="rmSearchTitle">Filtre tes recherches :</h1>
         <?php require_once 'forms/selectCoursForms.php'?>

@@ -8,4 +8,7 @@
         <option value="educator">éducateur</option>
         <option value="secretary">Service administratif</option>
     </select>
+    <div class="boxBtnValideSignup">
+        <button type="submit" class="btnValideRoleSignup">Valider</button>
+    </div>
 </form>

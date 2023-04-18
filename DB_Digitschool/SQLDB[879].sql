@@ -40,11 +40,11 @@ create table student(
                         firstName varchar(32) not null,
                         email varchar(254) not null,
                         password varchar(100) not null,
-                        phoneNumber varchar(20) not null,
-                        birthDate datetime not null,
                         adress varchar(50) not null,
                         postalCode varchar(20) not null,
                         ville varchar(30) not null,
+                        phoneNumber varchar(20) not null,
+                        birthDate datetime not null,
                         function varchar(32) not null,
                         respondablePay boolean not null,
                         classId int,
@@ -96,7 +96,6 @@ create table parent(
                        phoneNumber varchar(20) not null,
                        birthDate datetime not null,
                        function varchar(32) not null,
-                       responsablePay boolean not null
 );
 
 create table student_parent(
