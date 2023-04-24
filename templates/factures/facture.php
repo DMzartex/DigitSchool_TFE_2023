@@ -62,7 +62,7 @@
                         <?php endif; ?>
                         <!-- Si secrétaire, il a le bouton modifié -->
                         <?php if($_SESSION['role'] == "secretary") : ?>
-                            <button class="BtnPayerFacture bckgColorGreen">Modifier</button>
+                            <a href="index.php?/templates/modif/modifFacture&factureIdmodif=<?=$resultFacture['factureId']?>" class="BtnPayerFacture bckgColorGreen">Modifier</a>
                             <button class="BtnPayerFacture bckgColorRed">Supprimer</button>
                         <?php endif; ?>
                     </div>

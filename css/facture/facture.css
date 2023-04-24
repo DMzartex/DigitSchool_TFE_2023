@@ -135,6 +135,7 @@ p{
     margin: 0.5em;
     color: black;
     cursor: pointer;
+    text-align: center;
 }
 
 form{
