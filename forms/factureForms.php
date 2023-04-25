@@ -27,9 +27,4 @@
         <div class="btnSend">
             <button type="submit" name="sendFacture" id="btnSend">Envoyer</button>
         </div>
-    <?php if(!empty($_POST['nomDesti'])): ?>
-        <div class="btnEdit">
-            <button type="submit" name="edit" id="btnSend">Modifier</button>
-        </div>
-    <?php endif; ?>
 </form>

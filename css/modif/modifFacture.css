@@ -1,0 +1,20 @@
+body{
+    background: #050528;
+}
+
+.MainModifFacture{
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    background: #050528;
+    display: flex;
+    justify-content: center;
+}
+
+.boxFormModifFacture{
+    width: 95%;
+    height: auto;
+    margin-top: 20px;
+    background: #151E2F;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
