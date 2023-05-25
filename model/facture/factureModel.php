@@ -19,3 +19,51 @@
      return $result;
  }
 
+ function verifPaymentCreated($conn,$factureId){
+     $query = $conn->prepare("SELECT * from paymentcreated WHERE factureId = :factureId");
+     $query->execute([
+         "factureId" => $factureId
+     ]);
+
+     $nbrResult = $query->rowCount();
+
+     if($nbrResult > 0){
+         return true;
+     }else{
+         return false;
+     }
+
+ }
+
+ function deletPaymentCreated($conn,$factureId){
+     try{
+         $query = $conn->prepare("DELETE FROM paymentcreated WHERE factureId = :factureId");
+         $query->execute([
+             "factureId" => $factureId
+         ]);
+     }catch (PDOException $ex){
+         echo "Une erreur s'est produite : " . $ex->getMessage();
+     }
+ }
+
+ function deleteFacture($conn,$factureId){
+     $verif = true;
+
+     if(verifPaymentCreated($conn,$factureId)){
+        deletPaymentCreated($conn,$factureId);
+     }
+
+     try{
+         $query = $conn->prepare("DELETE FROM facture where factureId = :factureId");
+         $query->execute([
+             "factureId" => $factureId
+         ]);
+     }catch (PDOException $e){
+         $verif = false;
+         echo "Une erreur s'est produite : ". $e->getMessage();
+     }
+
+     return $verif;
+
+ }
+

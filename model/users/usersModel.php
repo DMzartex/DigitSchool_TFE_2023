@@ -33,6 +33,15 @@ function getSecondId($conn,$role2,$id){
     return $idResult;
 }
 
+function getParent($conn, $parentId) {
+    $query = $conn->prepare("SELECT name from parent WHERE parentId = :parentId ");
+    $query->execute([
+        'parentId' => $parentId
+    ]);
+    $parent = $query->fetch();
+    return $parent;
+}
+
 /*function getStudentIdByParent($conn,$id){
     $parentId = $roleIdSearch = preg_replace("/[^a-zA-Z0-9]/", "", $id);
     $stmt = $conn-prepare("SELECT studentId FROM student_parent WHERE parentId = :id ");

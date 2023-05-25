@@ -2,19 +2,19 @@
 <form action="" method="post">
     <div class="display-flex-column">
         <label for="nameDesti" class="labelFormFact">Nom du destinataire :</label>
-        <input class="input" type="text" name="nameDesti" id="nameDesti" <?php if(isset($_SESSION['infoName'])):?> value="<?=$_SESSION['infoName']?>"<?php endif;?>>
+        <input class="input" type="text" name="nameDesti" id="nameDesti" <?php if(isset($infoName)):?> value="<?=$infoName?>"<?php endif;?>>
     </div>
     <div class="display-flex-column">
         <label for="firstNameDesti" class="labelFormFact">Prénom du destinataire :</label>
-        <input class="input" type="text" name="firstNameDesti" id="firstNameDesti" <?php if(isset($_SESSION['infoFirstName'])):?> value="<?=$_SESSION['infoFirstName']?>"<?php endif;?>>
+        <input class="input" type="text" name="firstNameDesti" id="firstNameDesti" <?php if(isset($infoFirstName)):?> value="<?=$infoFirstName?>"<?php endif;?>>
     </div>
     <div class="display-flex-column">
         <label for="adresse" class="labelFormFact">Adresse du destinataire :</label>
-        <input class="input" type="text" name="addrDesti" id="adresse" <?php if(isset($_SESSION['infoAdress'])):?> value="<?=$_SESSION['infoAdress']?>"<?php endif;?>>
+        <input class="input" type="text" name="addrDesti" id="adresse" <?php if(isset($infoAdress)):?> value="<?=$infoAdress?>"<?php endif;?>>
     </div>
     <div class="display-flex-column">
         <label for="postalCode" class="labelFormFact">Code postal du destinataire :</label>
-        <input class="input" type="text" name="postalCodeDesti" id="postalCode" <?php if(isset($_SESSION['infoPostalCode'])):?> value="<?=$_SESSION['infoPostalCode']?>"<?php endif;?>>
+        <input class="input" type="text" name="postalCodeDesti" id="postalCode" <?php if(isset($infoPostalCode)):?> value="<?=$infoPostalCode?>"<?php endif;?>>
     </div>
     <div class="display-flex-column">
         <label for="communication" class="labelFormFact">Communication :</label>

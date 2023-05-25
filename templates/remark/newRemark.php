@@ -8,7 +8,7 @@
         </div>
         <!-- si secrétaire alors afficher cette partie -->
         <div class="rmHeader2">
-            <?php if($_SESSION['role'] == "teacher"): ?>
+            <?php if($_SESSION['role'] == "teacher" || $_SESSION['role'] == "educator"): ?>
                 <div class="newRmSearchBarContent">
                     <?php require_once 'components/searchBar.php'?>
                 </div>

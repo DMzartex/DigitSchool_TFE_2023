@@ -1,0 +1,80 @@
+body{
+    background: #0A092D;
+}
+.containerMain{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.boxContentPage{
+    margin-top: 2em;
+    width: 95%;
+    height: 80%;
+}
+
+.Title{
+    font-size: 25px;
+    color: white;
+    font-family: 'Roboto';
+    letter-spacing: 1px;
+}
+
+.boxSearchUser{
+    width: 100%;
+}
+
+.rmSearchBtn{
+    margin-top: 10px;
+    border-radius: 10px;
+    width: 30%;
+    background: #93CBA3;
+    color: white;
+    font-family: Roboto;
+}
+
+.containerMainRetard{
+    width: 100%;
+    height: 100%;
+    margin-top: 1em;
+    border-top: 1px solid white;
+
+}
+
+.containerRetardJustified{
+    height: 50%;
+}
+
+.titleRetard{
+    font-family: Roboto;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    border-bottom: 1px solid white;
+    width: 50%;
+    padding-left: 5px;
+}
+
+.containerRetardUnjustified{
+    height: 50%;
+    margin-top: 3em;
+}
+
+.retard{
+    background: #161B2A;
+    margin-top: 2em;
+    border-radius: 20px;
+    box-shadow:  23px 23px 31px #131724,
+    -23px -23px 31px #191f30;
+}
+
+.txtInfoRetard{
+    color: white;
+    font-family: 'Roboto';
+    padding: 10px;
+}
+
+.txtRed{
+    color: #BA1F33;
+}

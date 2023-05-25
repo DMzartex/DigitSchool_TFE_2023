@@ -17,7 +17,7 @@
         <input class="inputFormModifFacture" type="text" name="codePostalFacture" id="codePostalFacture" value="<?=$codePostalFacture?>">
     </div>
     <div class="boxInputFormModifFacture">
-        <label class="labelFormModifFacture" for="descriptionFacture">Description : :</label>
+        <label class="labelFormModifFacture" for="descriptionFacture">Communication : :</label>
         <input class="inputFormModifFacture" type="text" name="descriptionFacture" id="descriptionFacture" value="<?=$descriptionFacture?>">
     </div>
     <div class="boxInputFormModifFacture">
@@ -25,7 +25,15 @@
         <input class="inputFormModifFacture" type="text" name="montantFacture" id="montantFacture" value="<?=$montantFacture?>">
     </div>
     <div class="boxInputFormModifFacture">
-        <button type="submit" class="btnModifFacture">Modifier</button>
+        <label class="labelFormModifFacture" for="studentIdFacture">Id de l'étudiant :</label>
+        <input class="inputFormModifFacture" type="text" name="studentIdFacture" id="studentIdFacture" value="<?=$studentId?>">
+    </div>
+    <div class="boxInputFormModifFacture">
+        <label class="labelFormModifFacture" for="parentIdFacture">Id du parent :</label>
+        <input class="inputFormModifFacture" type="text" name="parentIdFacture" id="parentIdFacture" value="<?=$parentId?>">
+    </div>
+    <div class="boxInputFormModifFacture">
+        <button type="submit" name="btnModifFact" class="btnModifFacture">Modifier</button>
     </div>
 
 </form>

@@ -18,7 +18,7 @@
         <label for="dateRem" class="labelFormFact">Date de la remarque :</label>
         <input class="input" type="date" name="dateRem" id="dateRem">
     </div>
-    <?php if ($_SESSION['role'] == "teacher"): ?>
+    <?php if ($_SESSION['role'] == "teacher" || $_SESSION['role'] == "educator"): ?>
         <div class="display-flex-column">
             <label for="coursRem" class="labelFormFact">cours :</label>
             <input class="input" type="text" name="coursRem" id="coursRem"

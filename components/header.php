@@ -34,7 +34,7 @@
                 <?php endif; ?>
                 <?php if($_SESSION['role'] == "student" || $_SESSION ['role'] == "parent" || $_SESSION['role'] == "educator" || $_SESSION['role'] == "teacher"): ?>
                     <li>
-                        <a href="#">Retard</a>
+                        <a href="index.php?/templates/retard/retard">Retard</a>
                     </li>
                 <?php endif; ?>
                 <?php if($_SESSION['role'] == "student" || $_SESSION['role'] == "parent" || $_SESSION['role'] == "educator" || $_SESSION['role'] == "teacher"): ?>

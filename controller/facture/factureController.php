@@ -1,7 +1,7 @@
 <?php
 $uri = $_SERVER['REQUEST_URI'];
 
-if($uri == "/DigitSchool_TFE_2023/index.php?/templates/factures/facture" && $_SESSION['role'] != "teacher" && $_SESSION['role'] != "educator"){
+if($uri == "/DigitSchool_TFE_2023/index.php?/templates/factures/facture" && $_SESSION['role'] != "teacher" && $_SESSION['role'] != "educator" || !empty($_GET['factureIdSuppr'])){
     $selectSearchBar = true;
     if($_SESSION['role'] == "secretary"){
         if(!empty($_POST['role'])){
@@ -13,7 +13,7 @@ if($uri == "/DigitSchool_TFE_2023/index.php?/templates/factures/facture" && $_SE
                 if (ctype_digit($matricule)) {
                     $id = $matricule;
                     // Select des factures en fonction du matricule entré dans la bar de recherche
-                    $_SESSION['resultFacture'] = getFacture($conn,$id);
+                    $resultFacture = getFacture($conn,$id);
 
                 } else {
                     echo "L'input ne ne contient pas uniquement des chiffres";
@@ -23,12 +23,24 @@ if($uri == "/DigitSchool_TFE_2023/index.php?/templates/factures/facture" && $_SE
     }else if ($_SESSION['role'] == "student"){
         $id = $_SESSION['userId'];
         $_SESSION['roleIdSearch'] = "studentId";
-        $_SESSION['resultFacture'] = getFacture($conn,$id);
+        $resultFacture = getFacture($conn,$id);
     }else if ($_SESSION['role'] == "parent"){
         $id = $_SESSION['userId'];
         $_SESSION['roleIdSearch'] = "parentId";
-        $_SESSION['resultFacture'] = getFacture($conn,$id);
+        $resultFacture = getFacture($conn,$id);
     }
+
+    if(!empty($_GET['factureIdSuppr'])){
+        $factureId = htmlspecialchars($_GET['factureIdSuppr']);
+        if(deleteFacture($conn,$factureId)){
+            $_SESSION['flashMessage'] = "Votre facture à bien été supprimé !";
+            $_SESSION['color'] = "success";
+        }else{
+            $_SESSION['flashMessage'] = "Une erreur est survenue la facture n'a pas pu être supprimé !";
+            $_SESSION['color'] = "danger";
+        }
+    }
+
     require_once 'templates/factures/facture.php';
 
 }

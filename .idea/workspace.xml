@@ -6,9 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="5e068316-d4ba-4522-9cce-5f6bd8b5af45" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/facture/factureController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/facture/factureController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/facture/newFactureController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/facture/newFactureController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/modif/modifFactureController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/modif/modifFactureController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/remark/remarkController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/remark/remarkController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forms/factureForms.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/factureForms.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forms/modif/modifFactureForms.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/modif/modifFactureForms.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forms/remarkForms.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/remarkForms.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/facture/factureModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/facture/factureModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/modif/modifFactureModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/modif/modifFactureModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/users/usersModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/users/usersModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/factures/facture.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/factures/facture.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/modif/modifFacture.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/modif/modifFacture.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/remark/newRemark.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/remark/newRemark.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +102,11 @@
       <workItem from="1681591201814" duration="18735000" />
       <workItem from="1681822200136" duration="4618000" />
       <workItem from="1682363420017" duration="72000" />
-      <workItem from="1682427120936" duration="4155000" />
+      <workItem from="1682427120936" duration="6383000" />
+      <workItem from="1684236035073" duration="2944000" />
+      <workItem from="1684263657187" duration="6255000" />
+      <workItem from="1684312249922" duration="7985000" />
+      <workItem from="1684494153601" duration="22173000" />
     </task>
     <servers />
   </component>

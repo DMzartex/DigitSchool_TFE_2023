@@ -1,7 +1,7 @@
 <?php
 $uri = $_SERVER['REQUEST_URI'];
 
-if($uri == "/DigitSchool_TFE_2023/index.php?/templates/remark/remark"){
+    if($uri == "/DigitSchool_TFE_2023/index.php?/templates/remark/remark"){
     $stPage = "remark";
     if($_SESSION['role'] == "student" || $_SESSION['role'] == "teacher" || $_SESSION['role'] == "educator"){
         // Récupèration de la liste des cours
@@ -33,7 +33,7 @@ if($uri == "/DigitSchool_TFE_2023/index.php?/templates/remark/remark"){
     }else if($_SESSION['role'] == "parent"){
         // Récupération de ou des id des étudiants par apport à l'id du parent
         $_SESSION['idStudent_parent'] = getIdStudent_Parent($conn,$_SESSION['userId']);
-        // Récupération des noms des étudiants par rapport aux id trouvé par la fonction getIdStudebt_Parent()
+        // Récupération des noms des étudiants par rapport aux id trouvé par la fonction getIdStudent_Parent()
         $_SESSION['nameStudent'] = getNameStudent($conn);
         // Vérifier si les filtres pour le select des remarques sont remplies.
         if(isset($_POST['selectStudent'])){
