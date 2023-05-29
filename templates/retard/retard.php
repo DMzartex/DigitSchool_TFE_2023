@@ -5,6 +5,7 @@
         <div class="boxTitle">
             <h1 class="Title">Listing des <span class="textGreen">retards</span></h1>
         </div>
+
         <?php if($_SESSION['role'] == "educator" || $_SESSION['role'] == "teacher"): ?>
         <div class="boxSearchUser">
             <?php require_once 'components/searchBar.php'?>

@@ -13,23 +13,10 @@
             <li>
                 <a href="#" class="active">Accueil</a>
             </li>
-            <li>
-                <a href="#">Informations</a>
-            </li>
             <?php if(!empty($_SESSION['role'])): ?>
                 <?php if($_SESSION['role'] == "student" || $_SESSION['role'] == "parent" || $_SESSION['role'] ==  "secretary"): ?>
                     <li>
                         <a href="index.php?/templates/factures/facture">Factures</a>
-                    </li>
-                <?php endif; ?>
-                <?php if($_SESSION['role'] == "student" || $_SESSION['role'] == "parent" || $_SESSION['role'] == "teacher"): ?>
-                    <li>
-                        <a href="#">Interrogation</a>
-                    </li>
-                <?php endif; ?>
-                <?php if($_SESSION['role'] == "student" || $_SESSION['role'] == "parent" || $_SESSION['role'] == "educator" ): ?>
-                    <li>
-                        <a href="">Absence</a>
                     </li>
                 <?php endif; ?>
                 <?php if($_SESSION['role'] == "student" || $_SESSION ['role'] == "parent" || $_SESSION['role'] == "educator" || $_SESSION['role'] == "teacher"): ?>

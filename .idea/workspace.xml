@@ -6,21 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="5e068316-d4ba-4522-9cce-5f6bd8b5af45" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DB_Digitschool/dbTfe2023[871][962][878].drawio" beforeDir="false" afterPath="$PROJECT_DIR$/DB_Digitschool/dbTfe2023[871][962][878].drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/class/StripePayement.php" beforeDir="false" afterPath="$PROJECT_DIR$/class/StripePayement.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/components/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/facture/factureController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/facture/factureController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/facture/newFactureController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/facture/newFactureController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/modif/modifFactureController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/modif/modifFactureController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/remark/remarkController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/remark/remarkController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/factureForms.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/factureForms.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/modif/modifFactureForms.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/modif/modifFactureForms.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/remarkForms.php" beforeDir="false" afterPath="$PROJECT_DIR$/forms/remarkForms.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/connect.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/connect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/retard/retardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/retard/retardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/retard/retard.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/retard/retard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/facture/factureModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/facture/factureModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/modif/modifFactureModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/modif/modifFactureModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/users/usersModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/users/usersModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/factures/facture.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/factures/facture.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/modif/modifFacture.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/modif/modifFacture.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/remark/newRemark.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/remark/newRemark.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/retard/retardModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/retard/retardModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/retard/retard.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/retard/retard.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,21 +53,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/DigitSchool_TFE_2023&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/xampp/htdocs/DigitSchool_TFE_2023",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="webhook.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/templates/payement/webhook.php">
       <method v="2" />
@@ -106,7 +100,11 @@
       <workItem from="1684236035073" duration="2944000" />
       <workItem from="1684263657187" duration="6255000" />
       <workItem from="1684312249922" duration="7985000" />
-      <workItem from="1684494153601" duration="22173000" />
+      <workItem from="1684494153601" duration="29393000" />
+      <workItem from="1685361587026" duration="5000" />
+      <workItem from="1685361672545" duration="6767000" />
+      <workItem from="1685384513417" duration="33000" />
+      <workItem from="1685395946094" duration="3000" />
     </task>
     <servers />
   </component>

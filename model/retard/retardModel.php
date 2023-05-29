@@ -8,3 +8,7 @@ function getRetard($conn,$userId){
  $result = $query->fetchAll();
  return $result;
 }
+
+function createRetard($conn){
+
+}

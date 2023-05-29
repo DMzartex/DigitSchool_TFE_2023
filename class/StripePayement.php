@@ -21,7 +21,7 @@ class StripePayment
             'line_items' => [[
                 'price_data' => [
                     'currency' => 'eur',
-                    'unit_amount' => $price,
+                    'unit_amount' => $price*100,
                     'product_data' => [
                         'name' => $title,
                     ],

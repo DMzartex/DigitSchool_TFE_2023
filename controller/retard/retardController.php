@@ -8,10 +8,12 @@ if($uri == "/DigitSchool_TFE_2023/index.php?/templates/retard/retard"){
         $resultRetard = getRetard($conn,$idStudent);
     }
 
+
     if($_SESSION['role'] == "teacher" || $_SESSION['role'] == "educator"){
-        $idStudent = htmlspecialchars($_POST['inputSearch']);
-        if(!empty($idStudent)){
+        if(!empty($_POST['inputSearch'])){
+            $idStudent = htmlspecialchars($_POST['inputSearch']);
             $resultRetard = getRetard($conn,$idStudent);
+
         }
     }
 

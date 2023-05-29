@@ -16,6 +16,7 @@ require_once 'model/remark/newRemarkModel.php';
 require_once 'model/signup/signupModel.php';
 require_once 'model/modif/modifFactureModel.php';
 require_once 'model/retard/retardModel.php';
+require_once 'model/retard/retardModel.php';
 require_once('vendor/autoload.php'); // Charge la bibliothèque Stripe PHP
 ?>
 
@@ -46,6 +47,7 @@ require_once('vendor/autoload.php'); // Charge la bibliothèque Stripe PHP
     <?php require_once 'controller/signup/signupController.php'?>
     <?php require_once 'controller/modif/modifFactureController.php'?>
     <?php require_once 'controller/retard/retardController.php'?>
+    <?php require_once 'controller/retard/newRetardController.php'?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
 </html>
